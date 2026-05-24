@@ -43,6 +43,10 @@ function App() {
   const [currentAllRecipients] = useState<Recipient[]>([]);
   const [currentSelectedRecipients] = useState<Recipient[]>([]);
 
+  // 删除确认对话框状态
+  const [deleteConfirmVisible, setDeleteConfirmVisible] = useState(false);
+  const [awardToDelete, setAwardToDelete] = useState<Award | null>(null);
+
   const searchInputRef = useRef<HTMLDivElement>(null);
 
   const currentUserDepartment = 'IT平台服务部';
@@ -104,9 +108,6 @@ function App() {
 
     const keyword = awardSearchKeyword.toLowerCase().trim();
     const results = ALL_AWARDS.filter(award => {
-      // 已添加的奖项不再显示
-      if (awards.some(a => a.id === award.id)) return false;
-
       // 关键词模糊搜索 - 支持标题、颁发部门、类型等
       const searchText = [
         award.title,
@@ -125,18 +126,19 @@ function App() {
   // 点击外部关闭下拉
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      // 如果删除确认对话框显示中，不关闭搜索下拉框
+      if (deleteConfirmVisible) return;
       if (searchInputRef.current && !searchInputRef.current.contains(event.target as Node)) {
         setShowSearchDropdown(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  }, [deleteConfirmVisible]);
 
   // 添加奖项到列表
   const handleAddAwardToList = (award: Award) => {
     setAwards(prev => [...prev, award]);
-    setSearchResults(prev => prev.filter(a => a.id !== award.id));
     setShowSearchDropdown(false);
     setAwardSearchKeyword('');
     // 如果这是第一个添加的奖项，自动选中它
@@ -236,6 +238,27 @@ function App() {
       setSelectedRecipientIds(new Set());
       setSelectedTeamIds(new Set());
     }
+  };
+
+  // 显示删除确认对话框
+  const handleShowDeleteConfirm = (award: Award) => {
+    setAwardToDelete(award);
+    setDeleteConfirmVisible(true);
+  };
+
+  // 确认删除奖项
+  const handleConfirmDelete = () => {
+    if (awardToDelete) {
+      handleRemoveAward(awardToDelete.id);
+      setDeleteConfirmVisible(false);
+      setAwardToDelete(null);
+    }
+  };
+
+  // 取消删除
+  const handleCancelDelete = () => {
+    setDeleteConfirmVisible(false);
+    setAwardToDelete(null);
   };
 
   // 获取第二列标题
@@ -485,7 +508,7 @@ function App() {
                           borderRadius: '4px',
                           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
                           zIndex: 100,
-                          maxHeight: '300px',
+                          maxHeight: '416px',
                           overflow: 'auto',
                         }}
                       >
@@ -504,51 +527,65 @@ function App() {
                                 borderBottom: '1px solid #f0f0f0',
                               }}
                             >
-                              找到 {searchResults.length} 个奖项，点击添加
+                              找到 {searchResults.length} 个奖项
                             </div>
-                            {searchResults.map((award) => (
-                              <div
-                                key={award.id}
-                                onClick={() => handleAddAwardToList(award)}
-                                style={{
-                                  padding: '12px 16px',
-                                  cursor: 'pointer',
-                                  borderBottom: '1px solid #f0f0f0',
-                                  transition: 'background-color 0.2s',
-                                }}
-                                onMouseEnter={(e) => {
-                                  e.currentTarget.style.backgroundColor = '#e6f7ff';
-                                }}
-                                onMouseLeave={(e) => {
-                                  e.currentTarget.style.backgroundColor = '#fff';
-                                }}
-                              >
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                  <span
-                                    style={{
-                                      padding: '2px 8px',
-                                      backgroundColor: award.awardType === 'individual' ? '#e6f7ff' : '#f6ffed',
-                                      color: award.awardType === 'individual' ? '#1890ff' : '#52c41a',
-                                      borderRadius: '4px',
-                                      fontSize: '11px',
-                                      fontWeight: 500,
-                                      display: 'inline-flex',
-                                      alignItems: 'center',
-                                      justifyContent: 'center',
-                                      minWidth: '28px',
-                                    }}
-                                  >
-                                    {award.awardType === 'individual' ? '个人' : '团队'}
-                                  </span>
-                                  <span style={{ fontSize: '14px', color: '#333', flex: 1 }}>
-                                    {award.title}
-                                  </span>
-                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#1890ff">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
-                                  </svg>
+                            {searchResults.map((award) => {
+                              const isAlreadyAdded = awards.some(a => a.id === award.id);
+                              return (
+                                <div
+                                  key={award.id}
+                                  onClick={() => isAlreadyAdded ? handleShowDeleteConfirm(award) : handleAddAwardToList(award)}
+                                  style={{
+                                    padding: '12px 16px',
+                                    cursor: 'pointer',
+                                    borderBottom: '1px solid #f0f0f0',
+                                    transition: 'background-color 0.2s',
+                                    backgroundColor: isAlreadyAdded ? '#fff2f0' : '#fff',
+                                  }}
+                                  onMouseEnter={(e) => {
+                                    if (!isAlreadyAdded) {
+                                      e.currentTarget.style.backgroundColor = '#e6f7ff';
+                                    } else {
+                                      e.currentTarget.style.backgroundColor = '#ffe6e6';
+                                    }
+                                  }}
+                                  onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = isAlreadyAdded ? '#fff2f0' : '#fff';
+                                  }}
+                                >
+                                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <span
+                                      style={{
+                                        padding: '2px 8px',
+                                        backgroundColor: award.awardType === 'individual' ? '#e6f7ff' : '#f6ffed',
+                                        color: award.awardType === 'individual' ? '#1890ff' : '#52c41a',
+                                        borderRadius: '4px',
+                                        fontSize: '11px',
+                                        fontWeight: 500,
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        minWidth: '28px',
+                                      }}
+                                    >
+                                      {award.awardType === 'individual' ? '个人' : '团队'}
+                                    </span>
+                                    <span style={{ fontSize: '14px', color: isAlreadyAdded ? '#999' : '#333', flex: 1 }}>
+                                      {award.title}
+                                    </span>
+                                    {isAlreadyAdded ? (
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="#ff4d4f">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
+                                      </svg>
+                                    ) : (
+                                      <svg width="16" height="16" viewBox="0 0 24 24" fill="#1890ff">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                                      </svg>
+                                    )}
+                                  </div>
                                 </div>
-                              </div>
-                            ))}
+                              );
+                            })}
                           </>
                         )}
                       </div>
@@ -1100,6 +1137,94 @@ function App() {
         viewOnly={teamSearchViewOnly}
         onTeamUpdate={() => {}}
       />
+
+      {/* 删除确认对话框 */}
+      {deleteConfirmVisible && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.45)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 2000,
+          }}
+          onClick={handleCancelDelete}
+        >
+          <div
+            style={{
+              backgroundColor: '#fff',
+              borderRadius: '8px',
+              width: '400px',
+              padding: '24px',
+              boxShadow: '0 6px 16px rgba(0, 0, 0, 0.12)',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#ff4d4f">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span style={{ fontSize: '16px', fontWeight: 600, color: '#333' }}>
+                确认删除
+              </span>
+            </div>
+            <p style={{ margin: '0 0 24px 0', fontSize: '14px', color: '#666', lineHeight: 1.6 }}>
+              确定要从奖项列表中删除「{awardToDelete?.title}」吗？
+            </p>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
+              <button
+                onClick={handleCancelDelete}
+                style={{
+                  padding: '8px 20px',
+                  backgroundColor: '#fff',
+                  color: '#595959',
+                  border: '1px solid #d9d9d9',
+                  borderRadius: '4px',
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#40a9ff';
+                  e.currentTarget.style.color = '#1890ff';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#d9d9d9';
+                  e.currentTarget.style.color = '#595959';
+                }}
+              >
+                取消
+              </button>
+              <button
+                onClick={handleConfirmDelete}
+                style={{
+                  padding: '8px 20px',
+                  backgroundColor: '#ff4d4f',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: '4px',
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  transition: 'background-color 0.2s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#ff7875';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#ff4d4f';
+                }}
+              >
+                确认删除
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
