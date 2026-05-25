@@ -154,15 +154,22 @@ export const AddAwardModal: React.FC<AddAwardModalProps> = ({
     });
   }, [selectedDeptPath, selectedYear]);
 
-  // 右侧：搜索过滤后的奖项
+  // 右侧：搜索过滤后的奖项（搜索框获取焦点时显示所有数据）
   const filteredAwards = useMemo(() => {
-    return departmentAwards.filter((award) => {
+    // 当搜索框获取焦点时，显示所有部门奖项数据
+    const sourceAwards = inputFocused ? MOCK_AWARDS.filter((award) => {
+      // 年份筛选
+      if (!award.issueDate?.startsWith(selectedYear)) return false;
+      return true;
+    }) : departmentAwards;
+
+    return sourceAwards.filter((award) => {
       if (searchKeyword && !award.name.toLowerCase().includes(searchKeyword.toLowerCase())) {
         return false;
       }
       return true;
     });
-  }, [departmentAwards, searchKeyword]);
+  }, [departmentAwards, MOCK_AWARDS, searchKeyword, inputFocused, selectedYear]);
 
   // 初始化选中状态：已加载的奖项设为选中
   useEffect(() => {

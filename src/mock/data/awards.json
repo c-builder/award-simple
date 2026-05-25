@@ -6,26 +6,126 @@
     "issuingDepartment": "华为公司",
     "awardType": "individual",
     "recipients": [
-      { "name": "李水花", "employeeId": "00494097", "department": "IT平台服务部/平台开发部", "isSelected": true },
-      { "name": "吴十", "employeeId": "00505555", "department": "IT平台服务部/平台开发部", "isSelected": true },
-      { "name": "陈十四", "employeeId": "00509999", "department": "IT平台服务部/平台运维部", "isSelected": true },
-      { "name": "沈十八", "employeeId": "00513333", "department": "IT平台服务部/技术支持部", "isSelected": true },
-      { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组", "isSelected": false },
-      { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组", "isSelected": false },
-      { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组", "isSelected": false },
-      { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组", "isSelected": false },
-      { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组", "isSelected": false },
-      { "name": "李四", "employeeId": "00505678", "department": "智能汽车解决方案部/智能驾驶组", "isSelected": false },
-      { "name": "孙八", "employeeId": "00503333", "department": "智能汽车解决方案部/智能座舱组", "isSelected": false },
-      { "name": "王十二", "employeeId": "00507777", "department": "智能汽车解决方案部/智能驾驶组", "isSelected": false },
-      { "name": "卫十六", "employeeId": "00511111", "department": "智能汽车解决方案部/智能座舱组", "isSelected": false },
-      { "name": "杨二十", "employeeId": "00515555", "department": "智能汽车解决方案部/智能驾驶组", "isSelected": false },
-      { "name": "周九", "employeeId": "00504444", "department": "云与计算业务部/大数据组", "isSelected": false },
-      { "name": "冯十三", "employeeId": "00508888", "department": "云与计算业务部/云计算组", "isSelected": false },
-      { "name": "蒋十七", "employeeId": "00512222", "department": "云与计算业务部/大数据组", "isSelected": false },
-      { "name": "朱二一", "employeeId": "00516666", "department": "云与计算业务部/云计算组", "isSelected": false },
-      { "name": "王五", "employeeId": "00507890", "department": "华为公司", "isSelected": false },
-      { "name": "赵六", "employeeId": "00501111", "department": "华为公司", "isSelected": false }
+      {
+        "name": "李水花",
+        "employeeId": "00494097",
+        "department": "IT平台服务部/平台开发部",
+        "isSelected": true
+      },
+      {
+        "name": "吴十",
+        "employeeId": "00505555",
+        "department": "IT平台服务部/平台开发部",
+        "isSelected": true
+      },
+      {
+        "name": "陈十四",
+        "employeeId": "00509999",
+        "department": "IT平台服务部/平台运维部",
+        "isSelected": true
+      },
+      {
+        "name": "沈十八",
+        "employeeId": "00513333",
+        "department": "IT平台服务部/技术支持部",
+        "isSelected": true
+      },
+      {
+        "name": "张三",
+        "employeeId": "00501234",
+        "department": "质量与流程IT部/质量部/测试组",
+        "isSelected": false
+      },
+      {
+        "name": "钱七",
+        "employeeId": "00502222",
+        "department": "质量与流程IT部/流程部/优化组",
+        "isSelected": false
+      },
+      {
+        "name": "郑十一",
+        "employeeId": "00506666",
+        "department": "质量与流程IT部/IT部/开发组",
+        "isSelected": false
+      },
+      {
+        "name": "褚十五",
+        "employeeId": "00510000",
+        "department": "质量与流程IT部/质量部/测试组",
+        "isSelected": false
+      },
+      {
+        "name": "韩十九",
+        "employeeId": "00514444",
+        "department": "质量与流程IT部/流程部/优化组",
+        "isSelected": false
+      },
+      {
+        "name": "李四",
+        "employeeId": "00505678",
+        "department": "智能汽车解决方案部/智能驾驶组",
+        "isSelected": false
+      },
+      {
+        "name": "孙八",
+        "employeeId": "00503333",
+        "department": "智能汽车解决方案部/智能座舱组",
+        "isSelected": false
+      },
+      {
+        "name": "王十二",
+        "employeeId": "00507777",
+        "department": "智能汽车解决方案部/智能驾驶组",
+        "isSelected": false
+      },
+      {
+        "name": "卫十六",
+        "employeeId": "00511111",
+        "department": "智能汽车解决方案部/智能座舱组",
+        "isSelected": false
+      },
+      {
+        "name": "杨二十",
+        "employeeId": "00515555",
+        "department": "智能汽车解决方案部/智能驾驶组",
+        "isSelected": false
+      },
+      {
+        "name": "周九",
+        "employeeId": "00504444",
+        "department": "云与计算业务部/大数据组",
+        "isSelected": false
+      },
+      {
+        "name": "冯十三",
+        "employeeId": "00508888",
+        "department": "云与计算业务部/云计算组",
+        "isSelected": false
+      },
+      {
+        "name": "蒋十七",
+        "employeeId": "00512222",
+        "department": "云与计算业务部/大数据组",
+        "isSelected": false
+      },
+      {
+        "name": "朱二一",
+        "employeeId": "00516666",
+        "department": "云与计算业务部/云计算组",
+        "isSelected": false
+      },
+      {
+        "name": "王五",
+        "employeeId": "00507890",
+        "department": "华为公司",
+        "isSelected": false
+      },
+      {
+        "name": "赵六",
+        "employeeId": "00501111",
+        "department": "华为公司",
+        "isSelected": false
+      }
     ],
     "isDefault": true,
     "pushDate": "2025-04-01"
@@ -45,12 +145,37 @@
         "memberCount": 6,
         "isSelected": false,
         "members": [
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -59,16 +184,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" }
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          }
         ]
       },
       {
@@ -77,15 +243,52 @@
         "memberCount": 9,
         "isSelected": false,
         "members": [
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" }
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          }
         ]
       },
       {
@@ -94,16 +297,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -112,16 +356,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" }
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          }
         ]
       },
       {
@@ -130,16 +415,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -148,16 +474,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -166,12 +533,37 @@
         "memberCount": 6,
         "isSelected": false,
         "members": [
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -180,14 +572,47 @@
         "memberCount": 8,
         "isSelected": false,
         "members": [
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -196,15 +621,52 @@
         "memberCount": 9,
         "isSelected": false,
         "members": [
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -213,16 +675,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/流程部/优化组" }
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/流程部/优化组"
+          }
         ]
       },
       {
@@ -231,13 +734,42 @@
         "memberCount": 7,
         "isSelected": false,
         "members": [
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -246,16 +778,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -264,12 +837,37 @@
         "memberCount": 6,
         "isSelected": false,
         "members": [
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -278,16 +876,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -296,16 +935,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -314,16 +994,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/流程部/优化组" }
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/流程部/优化组"
+          }
         ]
       },
       {
@@ -332,16 +1053,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -350,16 +1112,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -368,12 +1171,37 @@
         "memberCount": 6,
         "isSelected": false,
         "members": [
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -382,12 +1210,37 @@
         "memberCount": 6,
         "isSelected": false,
         "members": [
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/流程部/优化组" }
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/流程部/优化组"
+          }
         ]
       },
       {
@@ -396,12 +1249,37 @@
         "memberCount": 6,
         "isSelected": false,
         "members": [
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -410,15 +1288,52 @@
         "memberCount": 9,
         "isSelected": false,
         "members": [
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -427,16 +1342,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -445,15 +1401,52 @@
         "memberCount": 9,
         "isSelected": false,
         "members": [
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -462,12 +1455,37 @@
         "memberCount": 6,
         "isSelected": false,
         "members": [
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -476,16 +1494,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -494,15 +1553,52 @@
         "memberCount": 9,
         "isSelected": false,
         "members": [
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -511,16 +1607,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" }
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          }
         ]
       },
       {
@@ -529,13 +1666,42 @@
         "memberCount": 7,
         "isSelected": false,
         "members": [
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -544,15 +1710,52 @@
         "memberCount": 9,
         "isSelected": false,
         "members": [
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -561,16 +1764,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" }
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          }
         ]
       },
       {
@@ -579,13 +1823,42 @@
         "memberCount": 7,
         "isSelected": false,
         "members": [
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -594,16 +1867,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -612,15 +1926,52 @@
         "memberCount": 9,
         "isSelected": false,
         "members": [
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -629,14 +1980,47 @@
         "memberCount": 8,
         "isSelected": false,
         "members": [
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
@@ -645,15 +2029,52 @@
         "memberCount": 9,
         "isSelected": false,
         "members": [
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -662,16 +2083,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/流程部/优化组", "role": "组长" },
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组" }
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "组长"
+          },
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组"
+          }
         ]
       },
       {
@@ -680,16 +2142,57 @@
         "memberCount": 10,
         "isSelected": false,
         "members": [
-          { "name": "雷七五", "employeeId": "00572222", "department": "质量与流程IT部/IT部/开发组", "role": "组长" },
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "袁六三", "employeeId": "00558888", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "史六七", "employeeId": "00562222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "岑七一", "employeeId": "00566666", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "雷七五",
+            "employeeId": "00572222",
+            "department": "质量与流程IT部/IT部/开发组",
+            "role": "组长"
+          },
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "袁六三",
+            "employeeId": "00558888",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "史六七",
+            "employeeId": "00562222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "岑七一",
+            "employeeId": "00566666",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -698,12 +2201,37 @@
         "memberCount": 6,
         "isSelected": false,
         "members": [
-          { "name": "贺七九", "employeeId": "00578888", "department": "质量与流程IT部/质量部/测试组", "role": "组长" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/IT部/开发组" }
+          {
+            "name": "贺七九",
+            "employeeId": "00578888",
+            "department": "质量与流程IT部/质量部/测试组",
+            "role": "组长"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/IT部/开发组"
+          }
         ]
       },
       {
@@ -712,11 +2240,32 @@
         "memberCount": 5,
         "isSelected": true,
         "members": [
-          { "name": "李水花", "employeeId": "00494097", "department": "IT平台服务部/平台开发部", "role": "组长" },
-          { "name": "吴十", "employeeId": "00505555", "department": "IT平台服务部/平台运维部" },
-          { "name": "赵六", "employeeId": "00501111", "department": "IT平台服务部/平台开发部" },
-          { "name": "陈十四", "employeeId": "00509999", "department": "IT平台服务部/平台运维部" },
-          { "name": "沈十八", "employeeId": "00513333", "department": "IT平台服务部/平台开发部" }
+          {
+            "name": "李水花",
+            "employeeId": "00494097",
+            "department": "IT平台服务部/平台开发部",
+            "role": "组长"
+          },
+          {
+            "name": "吴十",
+            "employeeId": "00505555",
+            "department": "IT平台服务部/平台运维部"
+          },
+          {
+            "name": "赵六",
+            "employeeId": "00501111",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "陈十四",
+            "employeeId": "00509999",
+            "department": "IT平台服务部/平台运维部"
+          },
+          {
+            "name": "沈十八",
+            "employeeId": "00513333",
+            "department": "IT平台服务部/平台开发部"
+          }
         ]
       },
       {
@@ -725,11 +2274,32 @@
         "memberCount": 5,
         "isSelected": true,
         "members": [
-          { "name": "吴十", "employeeId": "00505555", "department": "IT平台服务部/平台运维部", "role": "组长" },
-          { "name": "赵六", "employeeId": "00501111", "department": "IT平台服务部/平台开发部" },
-          { "name": "陈十四", "employeeId": "00509999", "department": "IT平台服务部/平台运维部" },
-          { "name": "沈十八", "employeeId": "00513333", "department": "IT平台服务部/平台开发部" },
-          { "name": "李水花", "employeeId": "00494097", "department": "IT平台服务部/平台运维部" }
+          {
+            "name": "吴十",
+            "employeeId": "00505555",
+            "department": "IT平台服务部/平台运维部",
+            "role": "组长"
+          },
+          {
+            "name": "赵六",
+            "employeeId": "00501111",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "陈十四",
+            "employeeId": "00509999",
+            "department": "IT平台服务部/平台运维部"
+          },
+          {
+            "name": "沈十八",
+            "employeeId": "00513333",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "李水花",
+            "employeeId": "00494097",
+            "department": "IT平台服务部/平台运维部"
+          }
         ]
       },
       {
@@ -738,103 +2308,82 @@
         "memberCount": 5,
         "isSelected": true,
         "members": [
-          { "name": "赵六", "employeeId": "00501111", "department": "IT平台服务部/平台开发部", "role": "组长" },
-          { "name": "陈十四", "employeeId": "00509999", "department": "IT平台服务部/平台运维部" },
-          { "name": "沈十八", "employeeId": "00513333", "department": "IT平台服务部/平台开发部" },
-          { "name": "李水花", "employeeId": "00494097", "department": "IT平台服务部/平台运维部" },
-          { "name": "吴十", "employeeId": "00505555", "department": "IT平台服务部/平台开发部" }
+          {
+            "name": "赵六",
+            "employeeId": "00501111",
+            "department": "IT平台服务部/平台开发部",
+            "role": "组长"
+          },
+          {
+            "name": "陈十四",
+            "employeeId": "00509999",
+            "department": "IT平台服务部/平台运维部"
+          },
+          {
+            "name": "沈十八",
+            "employeeId": "00513333",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "李水花",
+            "employeeId": "00494097",
+            "department": "IT平台服务部/平台运维部"
+          },
+          {
+            "name": "吴十",
+            "employeeId": "00505555",
+            "department": "IT平台服务部/平台开发部"
+          }
         ]
       },
       {
         "id": "team-044",
         "name": "OCC项目支持优秀团队",
-        "memberCount": 5,
+        "memberCount": 0,
         "isSelected": false,
-        "members": [
-          { "name": "卫十六", "employeeId": "00511111", "department": "智能汽车解决方案部/智能座舱组", "role": "组长" },
-          { "name": "杨二十", "employeeId": "00515555", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "李四", "employeeId": "00505678", "department": "智能汽车解决方案部/智能座舱组" },
-          { "name": "孙八", "employeeId": "00503333", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "王十二", "employeeId": "00507777", "department": "智能汽车解决方案部/智能座舱组" }
-        ]
+        "members": []
       },
       {
         "id": "team-045",
         "name": "OCC业务对接优秀团队",
-        "memberCount": 5,
+        "memberCount": 0,
         "isSelected": false,
-        "members": [
-          { "name": "杨二十", "employeeId": "00515555", "department": "智能汽车解决方案部/智能驾驶组", "role": "组长" },
-          { "name": "李四", "employeeId": "00505678", "department": "智能汽车解决方案部/智能座舱组" },
-          { "name": "孙八", "employeeId": "00503333", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "王十二", "employeeId": "00507777", "department": "智能汽车解决方案部/智能座舱组" },
-          { "name": "卫十六", "employeeId": "00511111", "department": "智能汽车解决方案部/智能驾驶组" }
-        ]
+        "members": []
       },
       {
         "id": "team-046",
         "name": "OCC技术攻关优秀团队",
-        "memberCount": 5,
+        "memberCount": 0,
         "isSelected": false,
-        "members": [
-          { "name": "王五", "employeeId": "00507890", "department": "云与计算业务部/大数据组", "role": "组长" },
-          { "name": "周九", "employeeId": "00504444", "department": "云与计算业务部/云计算组" },
-          { "name": "冯十三", "employeeId": "00508888", "department": "云与计算业务部/大数据组" },
-          { "name": "蒋十七", "employeeId": "00512222", "department": "云与计算业务部/云计算组" },
-          { "name": "朱二一", "employeeId": "00516666", "department": "云与计算业务部/大数据组" }
-        ]
+        "members": []
       },
       {
         "id": "team-047",
         "name": "OCC创新实践优秀团队",
-        "memberCount": 5,
+        "memberCount": 0,
         "isSelected": false,
-        "members": [
-          { "name": "周九", "employeeId": "00504444", "department": "云与计算业务部/云计算组", "role": "组长" },
-          { "name": "冯十三", "employeeId": "00508888", "department": "云与计算业务部/大数据组" },
-          { "name": "蒋十七", "employeeId": "00512222", "department": "云与计算业务部/云计算组" },
-          { "name": "朱二一", "employeeId": "00516666", "department": "云与计算业务部/大数据组" },
-          { "name": "王五", "employeeId": "00507890", "department": "云与计算业务部/云计算组" }
-        ]
+        "members": []
       },
       {
         "id": "team-048",
         "name": "OCC数字化转型优秀团队",
-        "memberCount": 5,
+        "memberCount": 0,
         "isSelected": false,
-        "members": [
-          { "name": "冯十三", "employeeId": "00508888", "department": "云与计算业务部/大数据组", "role": "组长" },
-          { "name": "蒋十七", "employeeId": "00512222", "department": "云与计算业务部/云计算组" },
-          { "name": "朱二一", "employeeId": "00516666", "department": "云与计算业务部/大数据组" },
-          { "name": "王五", "employeeId": "00507890", "department": "云与计算业务部/云计算组" },
-          { "name": "周九", "employeeId": "00504444", "department": "云与计算业务部/大数据组" }
-        ]
+        "members": []
       },
       {
         "id": "team-049",
         "name": "OCC智能化运维优秀团队",
-        "memberCount": 5,
+        "memberCount": 0,
         "isSelected": false,
-        "members": [
-          { "name": "蒋十七", "employeeId": "00512222", "department": "云与计算业务部/云计算组", "role": "组长" },
-          { "name": "朱二一", "employeeId": "00516666", "department": "云与计算业务部/大数据组" },
-          { "name": "王五", "employeeId": "00507890", "department": "云与计算业务部/云计算组" },
-          { "name": "周九", "employeeId": "00504444", "department": "云与计算业务部/大数据组" },
-          { "name": "冯十三", "employeeId": "00508888", "department": "云与计算业务部/云计算组" }
-        ]
+        "members": []
       },
       {
         "id": "team-050",
         "name": "OCC生态建设优秀团队",
-        "memberCount": 5,
+        "memberCount": 0,
         "isSelected": false,
-        "members": [
-          { "name": "朱二一", "employeeId": "00516666", "department": "云与计算业务部/大数据组", "role": "组长" },
-          { "name": "王五", "employeeId": "00507890", "department": "云与计算业务部/云计算组" },
-          { "name": "周九", "employeeId": "00504444", "department": "云与计算业务部/大数据组" },
-          { "name": "冯十三", "employeeId": "00508888", "department": "云与计算业务部/云计算组" },
-          { "name": "蒋十七", "employeeId": "00512222", "department": "云与计算业务部/大数据组" }
-        ]
+        "members": []
       }
     ],
     "isDefault": true,
@@ -851,52 +2400,154 @@
       {
         "id": "team-005",
         "name": "平台架构优化团队",
-        "memberCount": 15,
+        "memberCount": 12,
         "isSelected": false,
         "members": [
-          { "name": "李水花", "employeeId": "00494097", "department": "IT平台服务部/平台开发部", "role": "架构师" },
-          { "name": "吴十", "employeeId": "00505555", "department": "IT平台服务部/平台开发部" },
-          { "name": "陈十四", "employeeId": "00509999", "department": "IT平台服务部/平台开发部" },
-          { "name": "沈十八", "employeeId": "00513333", "department": "IT平台服务部/平台运维部" },
-          { "name": "赵六", "employeeId": "00501111", "department": "IT平台服务部/平台运维部" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "李四", "employeeId": "00505678", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "王五", "employeeId": "00507890", "department": "云与计算业务部/云计算组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "孙八", "employeeId": "00503333", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "周九", "employeeId": "00504444", "department": "云与计算业务部/云计算组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "王十二", "employeeId": "00507777", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "冯十三", "employeeId": "00508888", "department": "云与计算业务部/云计算组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" }
+          {
+            "name": "李水花",
+            "employeeId": "00494097",
+            "department": "IT平台服务部/平台开发部",
+            "role": "架构师"
+          },
+          {
+            "name": "吴十",
+            "employeeId": "00505555",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "陈十四",
+            "employeeId": "00509999",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "沈十八",
+            "employeeId": "00513333",
+            "department": "IT平台服务部/平台运维部"
+          },
+          {
+            "name": "赵六",
+            "employeeId": "00501111",
+            "department": "IT平台服务部/平台运维部"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "李四",
+            "employeeId": "00505678",
+            "department": "智能汽车解决方案部/智能驾驶组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "孙八",
+            "employeeId": "00503333",
+            "department": "智能汽车解决方案部/智能驾驶组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "王十二",
+            "employeeId": "00507777",
+            "department": "智能汽车解决方案部/智能驾驶组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          }
         ]
       },
       {
         "id": "team-006",
         "name": "DevOps转型推进团队",
-        "memberCount": 20,
+        "memberCount": 15,
         "isSelected": false,
         "members": [
-          { "name": "李水花", "employeeId": "00494097", "department": "IT平台服务部/平台开发部" },
-          { "name": "吴十", "employeeId": "00505555", "department": "IT平台服务部/平台开发部" },
-          { "name": "陈十四", "employeeId": "00509999", "department": "IT平台服务部/平台开发部" },
-          { "name": "沈十八", "employeeId": "00513333", "department": "IT平台服务部/平台运维部" },
-          { "name": "赵六", "employeeId": "00501111", "department": "IT平台服务部/平台运维部", "role": "负责人" },
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "李四", "employeeId": "00505678", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "王五", "employeeId": "00507890", "department": "云与计算业务部/云计算组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "孙八", "employeeId": "00503333", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "周九", "employeeId": "00504444", "department": "云与计算业务部/云计算组" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "王十二", "employeeId": "00507777", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "冯十三", "employeeId": "00508888", "department": "云与计算业务部/云计算组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "卫十六", "employeeId": "00511111", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "蒋十七", "employeeId": "00512222", "department": "云与计算业务部/云计算组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "杨二十", "employeeId": "00515555", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "朱二一", "employeeId": "00516666", "department": "云与计算业务部/云计算组" }
+          {
+            "name": "李水花",
+            "employeeId": "00494097",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "吴十",
+            "employeeId": "00505555",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "陈十四",
+            "employeeId": "00509999",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "沈十八",
+            "employeeId": "00513333",
+            "department": "IT平台服务部/平台运维部"
+          },
+          {
+            "name": "赵六",
+            "employeeId": "00501111",
+            "department": "IT平台服务部/平台运维部",
+            "role": "负责人"
+          },
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "李四",
+            "employeeId": "00505678",
+            "department": "智能汽车解决方案部/智能驾驶组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "孙八",
+            "employeeId": "00503333",
+            "department": "智能汽车解决方案部/智能驾驶组"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "王十二",
+            "employeeId": "00507777",
+            "department": "智能汽车解决方案部/智能驾驶组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "卫十六",
+            "employeeId": "00511111",
+            "department": "智能汽车解决方案部/智能驾驶组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "杨二十",
+            "employeeId": "00515555",
+            "department": "智能汽车解决方案部/智能驾驶组"
+          }
         ]
       }
     ],
@@ -914,25 +2565,55 @@
       {
         "id": "team-007",
         "name": "流程自动化改造团队",
-        "memberCount": 16,
+        "memberCount": 9,
         "isSelected": false,
         "members": [
-          { "name": "张三", "employeeId": "00501234", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "钱七", "employeeId": "00502222", "department": "质量与流程IT部/流程部/优化组", "role": "负责人" },
-          { "name": "郑十一", "employeeId": "00506666", "department": "质量与流程IT部/IT部/开发组" },
-          { "name": "褚十五", "employeeId": "00510000", "department": "质量与流程IT部/质量部/测试组" },
-          { "name": "韩十九", "employeeId": "00514444", "department": "质量与流程IT部/流程部/优化组" },
-          { "name": "李水花", "employeeId": "00494097", "department": "IT平台服务部/平台开发部" },
-          { "name": "李四", "employeeId": "00505678", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "王五", "employeeId": "00507890", "department": "云与计算业务部/云计算组" },
-          { "name": "赵六", "employeeId": "00501111", "department": "IT平台服务部/平台运维部" },
-          { "name": "孙八", "employeeId": "00503333", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "周九", "employeeId": "00504444", "department": "云与计算业务部/云计算组" },
-          { "name": "吴十", "employeeId": "00505555", "department": "IT平台服务部/平台开发部" },
-          { "name": "王十二", "employeeId": "00507777", "department": "智能汽车解决方案部/智能驾驶组" },
-          { "name": "冯十三", "employeeId": "00508888", "department": "云与计算业务部/云计算组" },
-          { "name": "陈十四", "employeeId": "00509999", "department": "IT平台服务部/平台开发部" },
-          { "name": "卫十六", "employeeId": "00511111", "department": "智能汽车解决方案部/智能驾驶组" }
+          {
+            "name": "张三",
+            "employeeId": "00501234",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "钱七",
+            "employeeId": "00502222",
+            "department": "质量与流程IT部/流程部/优化组",
+            "role": "负责人"
+          },
+          {
+            "name": "郑十一",
+            "employeeId": "00506666",
+            "department": "质量与流程IT部/IT部/开发组"
+          },
+          {
+            "name": "褚十五",
+            "employeeId": "00510000",
+            "department": "质量与流程IT部/质量部/测试组"
+          },
+          {
+            "name": "韩十九",
+            "employeeId": "00514444",
+            "department": "质量与流程IT部/流程部/优化组"
+          },
+          {
+            "name": "李水花",
+            "employeeId": "00494097",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "赵六",
+            "employeeId": "00501111",
+            "department": "IT平台服务部/平台运维部"
+          },
+          {
+            "name": "吴十",
+            "employeeId": "00505555",
+            "department": "IT平台服务部/平台开发部"
+          },
+          {
+            "name": "陈十四",
+            "employeeId": "00509999",
+            "department": "IT平台服务部/平台开发部"
+          }
         ]
       }
     ],
@@ -946,18 +2627,1750 @@
     "issuingDepartment": "华为公司",
     "awardType": "individual",
     "recipients": [
-      { "name": "袁六三", "employeeId": "00558888", "department": "IT平台服务部/平台开发部", "isSelected": true },
-      { "name": "史六七", "employeeId": "00562222", "department": "IT平台服务部/技术支持部", "isSelected": true },
-      { "name": "岑七一", "employeeId": "00566666", "department": "IT平台服务部/平台运维部", "isSelected": true },
-      { "name": "柳六四", "employeeId": "00559999", "department": "质量与流程IT部/IT部/开发组", "isSelected": false },
-      { "name": "唐六八", "employeeId": "00563333", "department": "质量与流程IT部/质量部/测试组", "isSelected": false },
-      { "name": "薛七二", "employeeId": "00567777", "department": "质量与流程IT部/流程部/优化组", "isSelected": false },
-      { "name": "酆六五", "employeeId": "00560000", "department": "智能汽车解决方案部/智能座舱组", "isSelected": false },
-      { "name": "费六九", "employeeId": "00564444", "department": "智能汽车解决方案部/智能驾驶组", "isSelected": false },
-      { "name": "鲍六六", "employeeId": "00561111", "department": "云与计算业务部/大数据组", "isSelected": false },
-      { "name": "廉七十", "employeeId": "00565555", "department": "云与计算业务部/云计算组", "isSelected": false }
+      {
+        "name": "袁六三",
+        "employeeId": "00558888",
+        "department": "IT平台服务部/平台开发部",
+        "isSelected": true
+      },
+      {
+        "name": "史六七",
+        "employeeId": "00562222",
+        "department": "IT平台服务部/技术支持部",
+        "isSelected": true
+      },
+      {
+        "name": "岑七一",
+        "employeeId": "00566666",
+        "department": "IT平台服务部/平台运维部",
+        "isSelected": true
+      },
+      {
+        "name": "柳六四",
+        "employeeId": "00559999",
+        "department": "质量与流程IT部/IT部/开发组",
+        "isSelected": false
+      },
+      {
+        "name": "唐六八",
+        "employeeId": "00563333",
+        "department": "质量与流程IT部/质量部/测试组",
+        "isSelected": false
+      },
+      {
+        "name": "薛七二",
+        "employeeId": "00567777",
+        "department": "质量与流程IT部/流程部/优化组",
+        "isSelected": false
+      }
     ],
     "isDefault": false,
     "pushDate": "2025-03-01"
+  },
+  {
+    "id": "6",
+    "issueDate": "2024-06-16",
+    "title": "2024年Q4优秀员工奖",
+    "issuingDepartment": "IT平台服务部",
+    "awardType": "team",
+    "isDefault": false,
+    "pushDate": "2024-06-09",
+    "recipients": [],
+    "teams": [
+      {
+        "id": "team-551",
+        "name": "数据分析团队-1",
+        "memberCount": 2,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "曹敏艳",
+            "employeeId": "005206361",
+            "department": "华为公司/行政部",
+            "role": "组长"
+          },
+          {
+            "name": "谢勇",
+            "employeeId": "005800807",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-368",
+        "name": "运维保障团队-2",
+        "memberCount": 5,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "周玲",
+            "employeeId": "005334455",
+            "department": "IT平台服务部/平台运维部",
+            "role": "组长"
+          },
+          {
+            "name": "孙勇文",
+            "employeeId": "005749600",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          },
+          {
+            "name": "蒋涛瑞",
+            "employeeId": "005958575",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "孙宇",
+            "employeeId": "005977196",
+            "department": "云与计算业务部/AI平台组",
+            "role": "成员"
+          },
+          {
+            "name": "凤勇浩",
+            "employeeId": "005272732",
+            "department": "云与计算业务部/大数据组",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-471",
+        "name": "客户服务团队-3",
+        "memberCount": 9,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "柏芳",
+            "employeeId": "005085093",
+            "department": "IT平台服务部/技术支持部",
+            "role": "组长"
+          },
+          {
+            "name": "赵霞",
+            "employeeId": "005223136",
+            "department": "华为公司/财务部",
+            "role": "成员"
+          },
+          {
+            "name": "奚磊",
+            "employeeId": "005996510",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "谢英娜",
+            "employeeId": "005241525",
+            "department": "IT平台服务部/技术支持部",
+            "role": "成员"
+          },
+          {
+            "name": "孙杰",
+            "employeeId": "005848911",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "彭超磊",
+            "employeeId": "005199545",
+            "department": "云与计算业务部/云计算组",
+            "role": "成员"
+          },
+          {
+            "name": "柏涛",
+            "employeeId": "005994102",
+            "department": "华为公司/行政部",
+            "role": "成员"
+          },
+          {
+            "name": "苏辉",
+            "employeeId": "005666707",
+            "department": "华为公司/行政部",
+            "role": "成员"
+          },
+          {
+            "name": "潘杰",
+            "employeeId": "005129659",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          }
+        ]
+      }
+    ],
+    "awardCount": 89
+  },
+  {
+    "id": "7",
+    "issueDate": "2024-02-03",
+    "title": "2024年Q1创新突破奖",
+    "issuingDepartment": "云与计算业务部",
+    "awardType": "individual",
+    "isDefault": false,
+    "pushDate": "2024-02-02",
+    "recipients": [
+      {
+        "name": "袁丽",
+        "employeeId": "005726899",
+        "department": "IT平台服务部/平台运维部",
+        "isSelected": false
+      },
+      {
+        "name": "郑娜明",
+        "employeeId": "005640503",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "马洋婷",
+        "employeeId": "005175443",
+        "department": "IT平台服务部/技术支持部",
+        "isSelected": true
+      },
+      {
+        "name": "水静伟",
+        "employeeId": "005118130",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": true
+      },
+      {
+        "name": "褚超静",
+        "employeeId": "005698658",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "葛轩",
+        "employeeId": "005307151",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": true
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "issueDate": "2024-09-14",
+    "title": "2024年Q4团队协作奖",
+    "issuingDepartment": "云与计算业务部",
+    "awardType": "team",
+    "isDefault": true,
+    "pushDate": "2024-09-04",
+    "recipients": [],
+    "teams": [
+      {
+        "id": "team-368",
+        "name": "创新研发团队-1",
+        "memberCount": 5,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "钱琪",
+            "employeeId": "005781195",
+            "department": "华为公司/人力资源部",
+            "role": "组长"
+          },
+          {
+            "name": "云嘉静",
+            "employeeId": "005100675",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          },
+          {
+            "name": "秦欣娟",
+            "employeeId": "005146630",
+            "department": "云与计算业务部/云计算组",
+            "role": "成员"
+          },
+          {
+            "name": "何芳",
+            "employeeId": "005610617",
+            "department": "华为公司/行政部",
+            "role": "成员"
+          },
+          {
+            "name": "谢英强",
+            "employeeId": "005897732",
+            "department": "华为公司/财务部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-719",
+        "name": "项目管理团队-2",
+        "memberCount": 3,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "姜勇",
+            "employeeId": "005600247",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "范昊",
+            "employeeId": "005824458",
+            "department": "云与计算业务部/云计算组",
+            "role": "成员"
+          },
+          {
+            "name": "凤明",
+            "employeeId": "005140205",
+            "department": "云与计算业务部/AI平台组",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-818",
+        "name": "安全审计团队-3",
+        "memberCount": 3,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "许琪",
+            "employeeId": "005511053",
+            "department": "云与计算业务部/AI平台组",
+            "role": "组长"
+          },
+          {
+            "name": "姜芳伟",
+            "employeeId": "005182560",
+            "department": "质量与流程IT部/IT部",
+            "role": "成员"
+          },
+          {
+            "name": "朱磊建",
+            "employeeId": "005816439",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-656",
+        "name": "产品设计团队-4",
+        "memberCount": 3,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "华辉",
+            "employeeId": "005225193",
+            "department": "云与计算业务部/大数据组",
+            "role": "组长"
+          },
+          {
+            "name": "戚欣",
+            "employeeId": "005052397",
+            "department": "云与计算业务部/大数据组",
+            "role": "成员"
+          },
+          {
+            "name": "彭婷文",
+            "employeeId": "005241100",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-307",
+        "name": "质量保证团队-5",
+        "memberCount": 7,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "范华",
+            "employeeId": "005547126",
+            "department": "云与计算业务部/AI平台组",
+            "role": "成员"
+          },
+          {
+            "name": "秦超玲",
+            "employeeId": "005496019",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "王娜",
+            "employeeId": "005644510",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "赵洋",
+            "employeeId": "005166144",
+            "department": "云与计算业务部/大数据组",
+            "role": "成员"
+          },
+          {
+            "name": "曹辉",
+            "employeeId": "005701257",
+            "department": "华为公司/财务部",
+            "role": "成员"
+          },
+          {
+            "name": "花平",
+            "employeeId": "005568478",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "孙瑞军",
+            "employeeId": "005920252",
+            "department": "质量与流程IT部/流程部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-879",
+        "name": "创新研发团队-6",
+        "memberCount": 8,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "杨瑞晨",
+            "employeeId": "005248345",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "彭静",
+            "employeeId": "005905569",
+            "department": "质量与流程IT部/IT部",
+            "role": "成员"
+          },
+          {
+            "name": "范娜桂",
+            "employeeId": "005812480",
+            "department": "云与计算业务部/云计算组",
+            "role": "成员"
+          },
+          {
+            "name": "柏洋",
+            "employeeId": "005966803",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "韦琪浩",
+            "employeeId": "005912166",
+            "department": "云与计算业务部/AI平台组",
+            "role": "成员"
+          },
+          {
+            "name": "潘伟",
+            "employeeId": "005558616",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          },
+          {
+            "name": "戚梓",
+            "employeeId": "005417524",
+            "department": "华为公司/财务部",
+            "role": "成员"
+          },
+          {
+            "name": "花刚勇",
+            "employeeId": "005840508",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-704",
+        "name": "产品设计团队-7",
+        "memberCount": 6,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "沈宇秀",
+            "employeeId": "005682179",
+            "department": "IT平台服务部/平台开发部",
+            "role": "组长"
+          },
+          {
+            "name": "苗英",
+            "employeeId": "005845458",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "尤平军",
+            "employeeId": "005276772",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          },
+          {
+            "name": "马雨敏",
+            "employeeId": "005746234",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "华强",
+            "employeeId": "005601561",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "孙瑞",
+            "employeeId": "005725772",
+            "department": "华为公司/财务部",
+            "role": "成员"
+          }
+        ]
+      }
+    ],
+    "awardCount": 78
+  },
+  {
+    "id": "9",
+    "issueDate": "2024-06-09",
+    "title": "2024年半年度技术先锋奖",
+    "issuingDepartment": "华为公司",
+    "awardType": "individual",
+    "isDefault": false,
+    "pushDate": "2024-06-06",
+    "recipients": [
+      {
+        "name": "潘浩",
+        "employeeId": "005831840",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": false
+      },
+      {
+        "name": "谢敏宇",
+        "employeeId": "005038582",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "朱静",
+        "employeeId": "005698657",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "曹娟",
+        "employeeId": "005098087",
+        "department": "IT平台服务部/平台开发部",
+        "isSelected": false
+      },
+      {
+        "name": "钱刚",
+        "employeeId": "005528095",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "陶雨娟",
+        "employeeId": "005652572",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": false
+      },
+      {
+        "name": "褚强",
+        "employeeId": "005028665",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": true
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "issueDate": "2024-09-22",
+    "title": "2024年Q4服务之星奖",
+    "issuingDepartment": "云与计算业务部",
+    "awardType": "individual",
+    "isDefault": true,
+    "pushDate": "2024-09-21",
+    "recipients": [
+      {
+        "name": "袁浩",
+        "employeeId": "005679710",
+        "department": "华为公司/财务部",
+        "isSelected": true
+      },
+      {
+        "name": "吴敏",
+        "employeeId": "005436398",
+        "department": "华为公司/行政部",
+        "isSelected": false
+      },
+      {
+        "name": "吴瑞丽",
+        "employeeId": "005260499",
+        "department": "IT平台服务部/技术支持部",
+        "isSelected": false
+      },
+      {
+        "name": "袁琪",
+        "employeeId": "005751616",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": false
+      },
+      {
+        "name": "魏辉",
+        "employeeId": "005088637",
+        "department": "华为公司/行政部",
+        "isSelected": true
+      },
+      {
+        "name": "韩梓敏",
+        "employeeId": "005081658",
+        "department": "IT平台服务部/平台运维部",
+        "isSelected": true
+      },
+      {
+        "name": "彭昊华",
+        "employeeId": "005800979",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "蒋军",
+        "employeeId": "005677637",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": false
+      },
+      {
+        "name": "范雨",
+        "employeeId": "005832879",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": false
+      },
+      {
+        "name": "奚琪",
+        "employeeId": "005488714",
+        "department": "IT平台服务部/技术支持部",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "issueDate": "2024-08-25",
+    "title": "2024年Q1管理卓越奖",
+    "issuingDepartment": "云与计算业务部",
+    "awardType": "individual",
+    "isDefault": true,
+    "pushDate": "2024-08-15",
+    "recipients": [
+      {
+        "name": "谢娟",
+        "employeeId": "005020093",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": true
+      },
+      {
+        "name": "昌静",
+        "employeeId": "005099873",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": true
+      },
+      {
+        "name": "奚秀",
+        "employeeId": "005392815",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": true
+      },
+      {
+        "name": "韩洋磊",
+        "employeeId": "005230801",
+        "department": "华为公司/人力资源部",
+        "isSelected": true
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "issueDate": "2025-08-27",
+    "title": "2025年Q4质量守护奖",
+    "issuingDepartment": "IT平台服务部",
+    "awardType": "team",
+    "isDefault": true,
+    "pushDate": "2025-08-26",
+    "recipients": [],
+    "teams": [
+      {
+        "id": "team-861",
+        "name": "客户服务团队-1",
+        "memberCount": 4,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "赵明",
+            "employeeId": "005488163",
+            "department": "质量与流程IT部/流程部",
+            "role": "组长"
+          },
+          {
+            "name": "凤强超",
+            "employeeId": "005165984",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "柳娟轩",
+            "employeeId": "005660515",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "水轩",
+            "employeeId": "005271975",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-548",
+        "name": "数据分析团队-2",
+        "memberCount": 5,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "范丽",
+            "employeeId": "005779088",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "金浩明",
+            "employeeId": "005534746",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          },
+          {
+            "name": "孙静",
+            "employeeId": "005947946",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "韩辉",
+            "employeeId": "005128774",
+            "department": "质量与流程IT部/流程部",
+            "role": "成员"
+          },
+          {
+            "name": "许娟",
+            "employeeId": "005310679",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-657",
+        "name": "质量保证团队-3",
+        "memberCount": 3,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "袁娜秀",
+            "employeeId": "005010487",
+            "department": "质量与流程IT部/IT部",
+            "role": "组长"
+          },
+          {
+            "name": "张英",
+            "employeeId": "005850112",
+            "department": "质量与流程IT部/流程部",
+            "role": "成员"
+          },
+          {
+            "name": "吕华勇",
+            "employeeId": "005224383",
+            "department": "华为公司/财务部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-207",
+        "name": "运维保障团队-4",
+        "memberCount": 7,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "金嘉",
+            "employeeId": "005814146",
+            "department": "IT平台服务部/平台开发部",
+            "role": "组长"
+          },
+          {
+            "name": "秦伟建",
+            "employeeId": "005499145",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "窦刚琪",
+            "employeeId": "005556857",
+            "department": "华为公司/财务部",
+            "role": "成员"
+          },
+          {
+            "name": "潘英超",
+            "employeeId": "005856556",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "何桂",
+            "employeeId": "005628633",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "周超",
+            "employeeId": "005840142",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "袁英",
+            "employeeId": "005678916",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-678",
+        "name": "运维保障团队-5",
+        "memberCount": 2,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "钱梓",
+            "employeeId": "005700512",
+            "department": "质量与流程IT部/质量部",
+            "role": "组长"
+          },
+          {
+            "name": "冯强",
+            "employeeId": "005197535",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-504",
+        "name": "质量保证团队-6",
+        "memberCount": 3,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "蒋敏英",
+            "employeeId": "005370664",
+            "department": "IT平台服务部/技术支持部",
+            "role": "组长"
+          },
+          {
+            "name": "吕磊",
+            "employeeId": "005521842",
+            "department": "质量与流程IT部/IT部",
+            "role": "成员"
+          },
+          {
+            "name": "鲁轩强",
+            "employeeId": "005593987",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-263",
+        "name": "安全审计团队-7",
+        "memberCount": 0,
+        "isSelected": true,
+        "members": []
+      },
+      {
+        "id": "team-869",
+        "name": "客户服务团队-8",
+        "memberCount": 5,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "凤平艳",
+            "employeeId": "005078761",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "朱昊艳",
+            "employeeId": "005281945",
+            "department": "IT平台服务部/技术支持部",
+            "role": "成员"
+          },
+          {
+            "name": "冯秀",
+            "employeeId": "005970419",
+            "department": "IT平台服务部/技术支持部",
+            "role": "成员"
+          },
+          {
+            "name": "韦伟丽",
+            "employeeId": "005606430",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "俞强勇",
+            "employeeId": "005821076",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          }
+        ]
+      }
+    ],
+    "awardCount": 55
+  },
+  {
+    "id": "13",
+    "issueDate": "2025-01-28",
+    "title": "2025年Q1效率提升奖",
+    "issuingDepartment": "智能汽车解决方案部",
+    "awardType": "team",
+    "isDefault": false,
+    "pushDate": "2025-01-21",
+    "recipients": [],
+    "teams": [
+      {
+        "id": "team-756",
+        "name": "项目管理团队-1",
+        "memberCount": 6,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "沈华",
+            "employeeId": "005364824",
+            "department": "质量与流程IT部/流程部",
+            "role": "组长"
+          },
+          {
+            "name": "魏桂桂",
+            "employeeId": "005366198",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "花芳",
+            "employeeId": "005192281",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "蒋建娟",
+            "employeeId": "005305509",
+            "department": "质量与流程IT部/IT部",
+            "role": "成员"
+          },
+          {
+            "name": "凤强娜",
+            "employeeId": "005176138",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "卫雨",
+            "employeeId": "005412199",
+            "department": "云与计算业务部/AI平台组",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-522",
+        "name": "运营支持团队-2",
+        "memberCount": 4,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "冯刚娜",
+            "employeeId": "005142946",
+            "department": "IT平台服务部/平台开发部",
+            "role": "成员"
+          },
+          {
+            "name": "张超",
+            "employeeId": "005201438",
+            "department": "云与计算业务部/云计算组",
+            "role": "成员"
+          },
+          {
+            "name": "卫强桂",
+            "employeeId": "005475412",
+            "department": "IT平台服务部/技术支持部",
+            "role": "成员"
+          },
+          {
+            "name": "蒋杰娟",
+            "employeeId": "005647067",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-906",
+        "name": "流程优化团队-3",
+        "memberCount": 3,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "苏建",
+            "employeeId": "005759976",
+            "department": "云与计算业务部/大数据组",
+            "role": "组长"
+          },
+          {
+            "name": "郑辉秀",
+            "employeeId": "005559115",
+            "department": "云与计算业务部/云计算组",
+            "role": "成员"
+          },
+          {
+            "name": "王霞平",
+            "employeeId": "005630512",
+            "department": "质量与流程IT部/IT部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-989",
+        "name": "数据分析团队-4",
+        "memberCount": 4,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "韦嘉欣",
+            "employeeId": "005653545",
+            "department": "IT平台服务部/平台开发部",
+            "role": "组长"
+          },
+          {
+            "name": "陶浩秀",
+            "employeeId": "005391705",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "吕军轩",
+            "employeeId": "005646216",
+            "department": "云与计算业务部/云计算组",
+            "role": "成员"
+          },
+          {
+            "name": "邹勇",
+            "employeeId": "005881645",
+            "department": "质量与流程IT部/流程部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-899",
+        "name": "项目管理团队-5",
+        "memberCount": 5,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "孙刚涛",
+            "employeeId": "005748978",
+            "department": "云与计算业务部/大数据组",
+            "role": "成员"
+          },
+          {
+            "name": "施轩洋",
+            "employeeId": "005767945",
+            "department": "华为公司/行政部",
+            "role": "成员"
+          },
+          {
+            "name": "苗婷芳",
+            "employeeId": "005049050",
+            "department": "云与计算业务部/大数据组",
+            "role": "成员"
+          },
+          {
+            "name": "蒋梓",
+            "employeeId": "005332960",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "戚玲",
+            "employeeId": "005592207",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          }
+        ]
+      }
+    ],
+    "awardCount": 81
+  },
+  {
+    "id": "14",
+    "issueDate": "2025-09-14",
+    "title": "2025年Q2客户满意奖",
+    "issuingDepartment": "质量与流程IT部",
+    "awardType": "team",
+    "isDefault": false,
+    "pushDate": "2025-09-05",
+    "recipients": [],
+    "teams": [
+      {
+        "id": "team-290",
+        "name": "产品设计团队-1",
+        "memberCount": 3,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "韦芳",
+            "employeeId": "005001595",
+            "department": "IT平台服务部/平台运维部",
+            "role": "组长"
+          },
+          {
+            "name": "马明",
+            "employeeId": "005213042",
+            "department": "IT平台服务部/平台运维部",
+            "role": "成员"
+          },
+          {
+            "name": "谢伟",
+            "employeeId": "005980931",
+            "department": "智能汽车解决方案部/智能驾驶组",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-813",
+        "name": "数据分析团队-2",
+        "memberCount": 2,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "章平琪",
+            "employeeId": "005375271",
+            "department": "智能汽车解决方案部/智能驾驶组",
+            "role": "组长"
+          },
+          {
+            "name": "何艳",
+            "employeeId": "005247876",
+            "department": "质量与流程IT部/IT部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-865",
+        "name": "市场推广团队-3",
+        "memberCount": 3,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "方瑞涛",
+            "employeeId": "005308953",
+            "department": "IT平台服务部/技术支持部",
+            "role": "组长"
+          },
+          {
+            "name": "戚丽丽",
+            "employeeId": "005337829",
+            "department": "智能汽车解决方案部/智能座舱组",
+            "role": "成员"
+          },
+          {
+            "name": "张秀秀",
+            "employeeId": "005803207",
+            "department": "智能汽车解决方案部/智能座舱组",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-854",
+        "name": "质量保证团队-4",
+        "memberCount": 4,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "尤丽婷",
+            "employeeId": "005556680",
+            "department": "质量与流程IT部/质量部",
+            "role": "组长"
+          },
+          {
+            "name": "蒋超",
+            "employeeId": "005753975",
+            "department": "华为公司/财务部",
+            "role": "成员"
+          },
+          {
+            "name": "喻明嘉",
+            "employeeId": "005504871",
+            "department": "IT平台服务部/技术支持部",
+            "role": "成员"
+          },
+          {
+            "name": "昌芳",
+            "employeeId": "005188679",
+            "department": "华为公司/行政部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-173",
+        "name": "运营支持团队-5",
+        "memberCount": 9,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "秦磊琪",
+            "employeeId": "005790398",
+            "department": "IT平台服务部/技术支持部",
+            "role": "组长"
+          },
+          {
+            "name": "郎晨",
+            "employeeId": "005626858",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "王伟",
+            "employeeId": "005674228",
+            "department": "质量与流程IT部/IT部",
+            "role": "成员"
+          },
+          {
+            "name": "魏浩艳",
+            "employeeId": "005350413",
+            "department": "质量与流程IT部/流程部",
+            "role": "成员"
+          },
+          {
+            "name": "陈丽",
+            "employeeId": "005431721",
+            "department": "华为公司/行政部",
+            "role": "成员"
+          },
+          {
+            "name": "孙玲丽",
+            "employeeId": "005788813",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "曹秀涛",
+            "employeeId": "005194997",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          },
+          {
+            "name": "戚秀",
+            "employeeId": "005297389",
+            "department": "智能汽车解决方案部/智能座舱组",
+            "role": "成员"
+          },
+          {
+            "name": "金嘉晨",
+            "employeeId": "005407968",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-559",
+        "name": "安全审计团队-6",
+        "memberCount": 3,
+        "isSelected": true,
+        "members": [
+          {
+            "name": "曹静",
+            "employeeId": "005657478",
+            "department": "质量与流程IT部/流程部",
+            "role": "组长"
+          },
+          {
+            "name": "许辉玲",
+            "employeeId": "005284745",
+            "department": "华为公司/行政部",
+            "role": "成员"
+          },
+          {
+            "name": "喻娟",
+            "employeeId": "005457792",
+            "department": "质量与流程IT部/IT部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-809",
+        "name": "技术支持团队-7",
+        "memberCount": 3,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "陶伟明",
+            "employeeId": "005274612",
+            "department": "华为公司/人力资源部",
+            "role": "成员"
+          },
+          {
+            "name": "金秀",
+            "employeeId": "005040135",
+            "department": "智能汽车解决方案部/车联网组",
+            "role": "成员"
+          },
+          {
+            "name": "窦洋昊",
+            "employeeId": "005098403",
+            "department": "质量与流程IT部/质量部",
+            "role": "成员"
+          }
+        ]
+      },
+      {
+        "id": "team-274",
+        "name": "运维保障团队-8",
+        "memberCount": 2,
+        "isSelected": false,
+        "members": [
+          {
+            "name": "钱丽",
+            "employeeId": "005400289",
+            "department": "质量与流程IT部/流程部",
+            "role": "成员"
+          },
+          {
+            "name": "王辉玲",
+            "employeeId": "005225713",
+            "department": "智能汽车解决方案部/智能座舱组",
+            "role": "成员"
+          }
+        ]
+      }
+    ],
+    "awardCount": 77
+  },
+  {
+    "id": "15",
+    "issueDate": "2024-06-14",
+    "title": "2024年Q4安全卫士奖",
+    "issuingDepartment": "华为公司",
+    "awardType": "individual",
+    "isDefault": false,
+    "pushDate": "2024-06-06",
+    "recipients": [
+      {
+        "name": "吴昊琪",
+        "employeeId": "005523637",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": false
+      },
+      {
+        "name": "冯建",
+        "employeeId": "005531965",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "周平",
+        "employeeId": "005282626",
+        "department": "IT平台服务部/平台运维部",
+        "isSelected": false
+      },
+      {
+        "name": "何洋",
+        "employeeId": "005304080",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": false
+      },
+      {
+        "name": "杨艳琪",
+        "employeeId": "005339697",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": true
+      },
+      {
+        "name": "邹雨",
+        "employeeId": "005297845",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": true
+      },
+      {
+        "name": "苗伟",
+        "employeeId": "005927006",
+        "department": "IT平台服务部/平台运维部",
+        "isSelected": false
+      },
+      {
+        "name": "曹宇芳",
+        "employeeId": "005003643",
+        "department": "华为公司/人力资源部",
+        "isSelected": false
+      },
+      {
+        "name": "朱婷",
+        "employeeId": "005256850",
+        "department": "华为公司/财务部",
+        "isSelected": true
+      },
+      {
+        "name": "彭娜",
+        "employeeId": "005071698",
+        "department": "华为公司/行政部",
+        "isSelected": false
+      },
+      {
+        "name": "吕霞华",
+        "employeeId": "005761579",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": false
+      },
+      {
+        "name": "褚杰",
+        "employeeId": "005141744",
+        "department": "IT平台服务部/平台开发部",
+        "isSelected": false
+      },
+      {
+        "name": "张娜琪",
+        "employeeId": "005749532",
+        "department": "华为公司/人力资源部",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "issueDate": "2024-11-25",
+    "title": "2024年半年度成本优化奖",
+    "issuingDepartment": "智能汽车解决方案部",
+    "awardType": "individual",
+    "isDefault": false,
+    "pushDate": "2024-11-23",
+    "recipients": [
+      {
+        "name": "柏丽娜",
+        "employeeId": "005190133",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": false
+      },
+      {
+        "name": "华军宇",
+        "employeeId": "005057801",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": false
+      },
+      {
+        "name": "范娟",
+        "employeeId": "005630431",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": true
+      },
+      {
+        "name": "柳洋静",
+        "employeeId": "005302376",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "凤明建",
+        "employeeId": "005808338",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": false
+      },
+      {
+        "name": "许秀",
+        "employeeId": "005906142",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": true
+      },
+      {
+        "name": "陈晨",
+        "employeeId": "005504761",
+        "department": "华为公司/财务部",
+        "isSelected": true
+      },
+      {
+        "name": "窦敏",
+        "employeeId": "005674999",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "何丽",
+        "employeeId": "005410599",
+        "department": "华为公司/人力资源部",
+        "isSelected": false
+      },
+      {
+        "name": "冯伟轩",
+        "employeeId": "005700223",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": true
+      },
+      {
+        "name": "戚丽",
+        "employeeId": "005789655",
+        "department": "IT平台服务部/技术支持部",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "issueDate": "2024-03-02",
+    "title": "2024年Q4流程改进奖",
+    "issuingDepartment": "IT平台服务部",
+    "awardType": "individual",
+    "isDefault": true,
+    "pushDate": "2024-02-23",
+    "recipients": [
+      {
+        "name": "姜丽",
+        "employeeId": "005531568",
+        "department": "IT平台服务部/平台运维部",
+        "isSelected": false
+      },
+      {
+        "name": "施浩",
+        "employeeId": "005870638",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "袁超",
+        "employeeId": "005239161",
+        "department": "华为公司/行政部",
+        "isSelected": false
+      },
+      {
+        "name": "陶杰军",
+        "employeeId": "005237946",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": false
+      },
+      {
+        "name": "韩辉琪",
+        "employeeId": "005450950",
+        "department": "IT平台服务部/平台运维部",
+        "isSelected": false
+      },
+      {
+        "name": "潘磊欣",
+        "employeeId": "005824534",
+        "department": "华为公司/行政部",
+        "isSelected": true
+      },
+      {
+        "name": "孙英",
+        "employeeId": "005674421",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": false
+      },
+      {
+        "name": "卫军",
+        "employeeId": "005281673",
+        "department": "华为公司/行政部",
+        "isSelected": false
+      },
+      {
+        "name": "华军英",
+        "employeeId": "005978498",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": false
+      },
+      {
+        "name": "苗辉嘉",
+        "employeeId": "005060026",
+        "department": "IT平台服务部/技术支持部",
+        "isSelected": false
+      },
+      {
+        "name": "陶浩",
+        "employeeId": "005318319",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": false
+      },
+      {
+        "name": "戚文",
+        "employeeId": "005182599",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "issueDate": "2024-11-23",
+    "title": "2024年Q3数字化转型奖",
+    "issuingDepartment": "华为公司",
+    "awardType": "individual",
+    "isDefault": false,
+    "pushDate": "2024-11-20",
+    "recipients": [
+      {
+        "name": "鲁静梓",
+        "employeeId": "005867310",
+        "department": "质量与流程IT部/流程部",
+        "isSelected": false
+      },
+      {
+        "name": "钱婷静",
+        "employeeId": "005025200",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "凤军",
+        "employeeId": "005753947",
+        "department": "华为公司/人力资源部",
+        "isSelected": true
+      },
+      {
+        "name": "秦嘉",
+        "employeeId": "005990213",
+        "department": "华为公司/人力资源部",
+        "isSelected": false
+      },
+      {
+        "name": "张文艳",
+        "employeeId": "005696321",
+        "department": "IT平台服务部/平台开发部",
+        "isSelected": false
+      },
+      {
+        "name": "葛勇",
+        "employeeId": "005065427",
+        "department": "IT平台服务部/平台开发部",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "issueDate": "2025-07-27",
+    "title": "2025年Q1敏捷实践奖",
+    "issuingDepartment": "IT平台服务部",
+    "awardType": "individual",
+    "isDefault": true,
+    "pushDate": "2025-07-23",
+    "recipients": [
+      {
+        "name": "朱宇",
+        "employeeId": "005780299",
+        "department": "华为公司/行政部",
+        "isSelected": false
+      },
+      {
+        "name": "姜浩晨",
+        "employeeId": "005154958",
+        "department": "IT平台服务部/技术支持部",
+        "isSelected": false
+      },
+      {
+        "name": "谢辉",
+        "employeeId": "005348959",
+        "department": "IT平台服务部/平台运维部",
+        "isSelected": true
+      },
+      {
+        "name": "袁英娜",
+        "employeeId": "005812611",
+        "department": "华为公司/行政部",
+        "isSelected": false
+      },
+      {
+        "name": "陈敏辉",
+        "employeeId": "005074512",
+        "department": "质量与流程IT部/质量部",
+        "isSelected": false
+      },
+      {
+        "name": "严秀",
+        "employeeId": "005483800",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": false
+      },
+      {
+        "name": "李磊",
+        "employeeId": "005275005",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": true
+      },
+      {
+        "name": "吕嘉",
+        "employeeId": "005462873",
+        "department": "华为公司/人力资源部",
+        "isSelected": true
+      },
+      {
+        "name": "杨艳",
+        "employeeId": "005641874",
+        "department": "IT平台服务部/技术支持部",
+        "isSelected": false
+      },
+      {
+        "name": "陈勇",
+        "employeeId": "005752847",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": true
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "issueDate": "2024-11-12",
+    "title": "2024年Q4知识分享奖",
+    "issuingDepartment": "IT平台服务部",
+    "awardType": "individual",
+    "isDefault": false,
+    "pushDate": "2024-11-11",
+    "recipients": [
+      {
+        "name": "陶辉强",
+        "employeeId": "005751556",
+        "department": "华为公司/财务部",
+        "isSelected": false
+      },
+      {
+        "name": "吕娜强",
+        "employeeId": "005554030",
+        "department": "华为公司/行政部",
+        "isSelected": true
+      },
+      {
+        "name": "赵轩",
+        "employeeId": "005187047",
+        "department": "华为公司/人力资源部",
+        "isSelected": false
+      },
+      {
+        "name": "喻洋静",
+        "employeeId": "005483450",
+        "department": "质量与流程IT部/IT部",
+        "isSelected": false
+      }
+    ]
   }
 ]

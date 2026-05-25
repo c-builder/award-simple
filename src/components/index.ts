@@ -14,4 +14,6 @@ export { AwardDetailDrawer, type AwardDetailDrawerProps } from './AwardDetailDra
 
 export { AddAwardModal, type AddAwardModalProps, type AwardItem, type AwardCategory } from './AddAwardModal';
 
+export { Pagination, type PaginationProps } from './Pagination';
+
 export type { Recipient, Award, Team, TeamMember, AwardType } from './types';
