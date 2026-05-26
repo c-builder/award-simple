@@ -671,6 +671,35 @@ function App() {
               </button>
             </div>
 
+            {/* 流程提示：轻量化阶段标签，不占用卡片空间 */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                marginBottom: '8px',
+                fontSize: '12px',
+                lineHeight: 1,
+                color: '#9ca3af',
+                flexShrink: 0,
+              }}
+            >
+              <span style={{ color: hasSearched ? '#1890ff' : '#9ca3af' }}>
+                查询奖项
+              </span>
+              <span style={{ color: '#d1d5db', userSelect: 'none' }}>›</span>
+              <span style={{ color: awards.length > 0 ? '#1890ff' : '#9ca3af' }}>
+                已选奖项
+              </span>
+              <span style={{ color: '#d1d5db', userSelect: 'none' }}>›</span>
+              <span style={{ color: canConfigureRecipients ? '#1890ff' : '#9ca3af' }}>
+                {selectedAward
+                  ? (selectedAward.awardType === 'individual' ? '选择获奖人' : '选择团队')
+                  : '选择获奖人/团队'}
+              </span>
+            </div>
+
             <div
               style={{
                 display: 'flex',
@@ -685,35 +714,6 @@ function App() {
                 overflow: 'hidden',
               }}
             >
-              {/* 阶段标签：主从链流向，非子步骤条 */}
-              <div
-                style={{
-                  flexShrink: 0,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '10px',
-                  padding: '10px 16px',
-                  borderBottom: '1px solid #f0f0f0',
-                  backgroundColor: '#fafafa',
-                  fontSize: '13px',
-                }}
-              >
-                <span style={{ color: hasSearched ? '#1890ff' : '#9ca3af', fontWeight: hasSearched ? 500 : 400 }}>
-                  查询奖项
-                </span>
-                <span style={{ color: '#d1d5db', userSelect: 'none' }}>›</span>
-                <span style={{ color: awards.length > 0 ? '#1890ff' : '#9ca3af', fontWeight: awards.length > 0 ? 500 : 400 }}>
-                  已选奖项
-                </span>
-                <span style={{ color: '#d1d5db', userSelect: 'none' }}>›</span>
-                <span style={{ color: canConfigureRecipients ? '#1890ff' : '#9ca3af', fontWeight: canConfigureRecipients ? 500 : 400 }}>
-                  {selectedAward
-                    ? (selectedAward.awardType === 'individual' ? '选择获奖人' : '选择团队')
-                    : '选择获奖人/团队'}
-                </span>
-              </div>
-
               <div
                 style={{
                   display: 'grid',
