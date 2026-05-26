@@ -168,15 +168,16 @@ function App() {
   const [currentAllRecipients] = useState<Recipient[]>([]);
   const [currentSelectedRecipients] = useState<Recipient[]>([]);
 
-  const currentUserDepartment = 'IT平台服务部';
+  const currentUserDepartment = '数字金融服务部';
 
   const accessibleDepartments = [
     '全部部门',
-    'IT平台服务部',
-    '质量与流程IT部',
-    '智能汽车解决方案部',
-    '云与计算业务部',
-    '华为公司',
+    '数字金融服务部',
+    '智能制造研究院',
+    '新能源技术中心',
+    '医疗健康事业部',
+    '国际化业务部',
+    '创新孵化中心',
   ];
 
   const [selectedDepartment, setSelectedDepartment] = useState<string>('全部部门');

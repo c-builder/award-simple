@@ -17,62 +17,177 @@ export interface DepartmentNode {
 // 默认部门数据
 export const defaultDepartmentTree: DepartmentNode[] = [
   {
-    name: '质量与流程IT部',
+    name: '数字金融服务部',
     children: [
       {
-        name: '质量部',
+        name: '支付平台部',
         children: [
-          { name: '测试组' },
-          { name: '评审组' },
-          { name: '认证组' },
+          { name: '支付开发组' },
+          { name: '支付运维组' },
+          { name: '风控算法组' },
         ],
       },
       {
-        name: '流程部',
+        name: '信贷产品部',
         children: [
-          { name: '优化组' },
-          { name: '标准组' },
+          { name: '信贷开发组' },
+          { name: '信贷风控组' },
+          { name: '个人信贷组' },
         ],
       },
       {
-        name: 'IT部',
+        name: '反欺诈中心',
         children: [
-          { name: '开发组' },
-          { name: '运维组' },
+          { name: '欺诈识别组' },
+          { name: '案件处置组' },
+          { name: '行为分析组' },
         ],
       },
     ],
   },
   {
-    name: 'IT平台服务部',
+    name: '智能制造研究院',
     children: [
-      { name: '平台开发部' },
-      { name: '平台运维部' },
-      { name: '技术支持部' },
+      {
+        name: '工业软件部',
+        children: [
+          { name: 'PLM研发组' },
+          { name: 'MES研发组' },
+          { name: '仿真平台组' },
+        ],
+      },
+      {
+        name: '自动化装备部',
+        children: [
+          { name: '机器人控制组' },
+          { name: '视觉检测组' },
+          { name: '运动控制组' },
+        ],
+      },
+      {
+        name: '数字工厂部',
+        children: [
+          { name: '数据中台组' },
+          { name: '智能调度组' },
+          { name: '工艺优化组' },
+        ],
+      },
     ],
   },
   {
-    name: '智能汽车解决方案部',
+    name: '新能源技术中心',
     children: [
-      { name: '智能驾驶组' },
-      { name: '智能座舱组' },
-      { name: '车联网组' },
+      {
+        name: '电池研发部',
+        children: [
+          { name: '材料研究组' },
+          { name: '电池结构组' },
+          { name: '性能测试组' },
+        ],
+      },
+      {
+        name: '电控系统部',
+        children: [
+          { name: 'BMS算法组' },
+          { name: '整车控制组' },
+          { name: '电驱开发组' },
+        ],
+      },
+      {
+        name: '充电网络部',
+        children: [
+          { name: '充电协议组' },
+          { name: '运营平台组' },
+          { name: '桩端硬件组' },
+        ],
+      },
     ],
   },
   {
-    name: '云与计算业务部',
+    name: '医疗健康事业部',
     children: [
-      { name: '云计算组' },
-      { name: '大数据组' },
-      { name: 'AI组' },
+      {
+        name: '影像产品部',
+        children: [
+          { name: 'CT研发组' },
+          { name: 'MR研发组' },
+          { name: 'AI算法组' },
+        ],
+      },
+      {
+        name: '临床信息部',
+        children: [
+          { name: 'HIS研发组' },
+          { name: '移动护理组' },
+          { name: '互联网医疗组' },
+        ],
+      },
+      {
+        name: '数据合规部',
+        children: [
+          { name: '隐私保护组' },
+          { name: '合规审计组' },
+          { name: '数据治理组' },
+        ],
+      },
     ],
   },
   {
-    name: '华为公司',
+    name: '国际化业务部',
     children: [
-      { name: '人力资源部' },
-      { name: '财务部' },
-      { name: '行政部' },
+      {
+        name: '海外营销部',
+        children: [
+          { name: '欧洲市场组' },
+          { name: '北美市场组' },
+          { name: '亚太市场组' },
+        ],
+      },
+      {
+        name: '跨境物流部',
+        children: [
+          { name: '海外仓储组' },
+          { name: '国际配送组' },
+          { name: '物流网络组' },
+        ],
+      },
+      {
+        name: '合规事务部',
+        children: [
+          { name: '海外法务组' },
+          { name: '关务通关组' },
+          { name: '税务筹划组' },
+        ],
+      },
+    ],
+  },
+  {
+    name: '创新孵化中心',
+    children: [
+      {
+        name: '前沿技术实验室',
+        children: [
+          { name: 'AIGC实验组' },
+          { name: '量子计算组' },
+          { name: '区块链组' },
+        ],
+      },
+      {
+        name: '战略投资部',
+        children: [
+          { name: '行业投研组' },
+          { name: '投后管理组' },
+          { name: '并购整合组' },
+        ],
+      },
+      {
+        name: '生态合作部',
+        children: [
+          { name: '开发者关系组' },
+          { name: '联合实验室组' },
+          { name: '开源运营组' },
+        ],
+      },
     ],
   },
 ];
