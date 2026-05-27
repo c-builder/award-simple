@@ -100,7 +100,7 @@ function FlowGuideBar() {
   const items = [
     '上方筛选栏设条件，点「查询」',
     '查询结果中点 + 加入已选奖项',
-    '「已选奖项」中选中一项，右侧勾选人员',
+    '「已选奖项」中选中一项，右侧勾选获奖人/团队',
   ];
   return (
     <div style={{ ...PANEL_HEADER_LEFT_STYLE, overflowX: 'auto', overflowY: 'hidden' }}>
@@ -120,33 +120,27 @@ function FlowGuideBar() {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '6px',
+                gap: '8px',
                 flexShrink: 0,
               }}
             >
               <span
                 style={{
-                  width: '20px',
-                  height: '20px',
-                  borderRadius: '50%',
-                  backgroundColor: '#1890ff',
-                  color: '#fff',
-                  fontSize: '11px',
+                  color: '#1677ff',
+                  fontSize: '13px',
                   fontWeight: 600,
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
                   flexShrink: 0,
+                  fontVariantNumeric: 'tabular-nums',
                 }}
               >
-                {index + 1}
+                {index + 1}.
               </span>
-              <span style={{ fontSize: '13px', color: '#374151', lineHeight: 1.4, whiteSpace: 'nowrap' }}>
+              <span style={{ fontSize: '13px', color: '#374151', lineHeight: '18px', whiteSpace: 'nowrap' }}>
                 {text}
               </span>
             </div>
             {index < items.length - 1 && (
-              <span style={{ color: '#c4c9d4', fontSize: '13px', flexShrink: 0, userSelect: 'none', padding: '0 2px' }}>›</span>
+              <span style={{ color: '#d1d5db', fontSize: '12px', flexShrink: 0, userSelect: 'none', margin: '0 4px' }}>›</span>
             )}
           </React.Fragment>
         ))}
