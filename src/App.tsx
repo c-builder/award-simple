@@ -114,7 +114,6 @@ function ColumnEmptyState({
             color: '#9ca3af',
             lineHeight: 1.6,
             maxWidth: '480px',
-            whiteSpace: 'nowrap',
           }}
         >
           {description}
@@ -138,6 +137,9 @@ function App() {
 
   // 从左侧加入已选后的短暂高亮
   const [highlightAwardId, setHighlightAwardId] = useState('');
+
+  // 左侧奖项区 Tab：查询结果 / 已选
+  const [awardPanelTab, setAwardPanelTab] = useState<'search' | 'selected'>('search');
 
   // 查询奖项结果
   const [searchResults, setSearchResults] = useState<Award[]>([]);
@@ -296,7 +298,12 @@ function App() {
 
   // 添加奖项到列表
   const handleAddAwardToList = (award: Award) => {
-    setAwards(prev => [...prev, award]);
+    setAwards(prev => {
+      if (prev.some(a => a.id === award.id)) return prev;
+      return [...prev, award];
+    });
+    setAwardPanelTab('selected');
+    setSelectedAwardId(award.id);
     setHighlightAwardId(award.id);
     window.setTimeout(() => setHighlightAwardId(''), 1500);
   };
@@ -339,6 +346,7 @@ function App() {
   const handleSelectAward = (awardId: string) => {
     setSelectedAwardId(awardId);
     setRecipientSearchKeyword('');
+    setAwardPanelTab('selected');
   };
 
   const handleToggleRecipient = (awardId: string, recipientId: string) => {
@@ -688,15 +696,39 @@ function App() {
             >
               <div
                 style={{
+                  padding: '10px 16px',
+                  backgroundColor: '#f0f7ff',
+                  borderBottom: '1px solid #d6e8ff',
+                  fontSize: '13px',
+                  color: '#4b5563',
+                  flexShrink: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  flexWrap: 'wrap',
+                }}
+              >
+                <span style={{ color: '#1890ff', fontWeight: 600 }}>①</span>
+                <span>设置条件并查询</span>
+                <span style={{ color: '#d1d5db' }}>→</span>
+                <span style={{ color: '#1890ff', fontWeight: 600 }}>②</span>
+                <span>在「查询结果」中点击 + 加入已选</span>
+                <span style={{ color: '#d1d5db' }}>→</span>
+                <span style={{ color: '#1890ff', fontWeight: 600 }}>③</span>
+                <span>在「已选」中选中奖项，于右侧勾选获奖人/团队</span>
+              </div>
+
+              <div
+                style={{
                   display: 'grid',
-                  gridTemplateColumns: '1fr 1fr 1fr',
+                  gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
                   gap: '0',
                   flex: 1,
                   minHeight: 0,
                   overflow: 'hidden',
                 }}
               >
-              {/* 第一列：查询奖项 */}
+              {/* 左栏：奖项（查询结果 + 已选 Tab） */}
               <div
                 style={{
                   borderRight: '1px solid #e5e7eb',
@@ -708,23 +740,110 @@ function App() {
               >
                 <div
                   style={{
-                    padding: '16px',
+                    padding: '0 16px',
                     borderBottom: '1px solid #e5e7eb',
-                    fontSize: '16px',
-                    fontWeight: 600,
-                    color: '#1f2937',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     height: '57px',
                     boxSizing: 'border-box',
+                    gap: '12px',
                   }}
                 >
-                  <span>查询奖项</span>
-                  {hasSearched && (
-                    <span style={{ fontSize: '13px', color: '#6b7280', fontWeight: 400 }}>
-                      共 <strong style={{ color: '#1890ff', fontWeight: 600 }}>{searchResults.length}</strong> 条
-                    </span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <button
+                      type="button"
+                      onClick={() => setAwardPanelTab('search')}
+                      style={{
+                        padding: '8px 14px',
+                        fontSize: '14px',
+                        fontWeight: awardPanelTab === 'search' ? 600 : 400,
+                        color: awardPanelTab === 'search' ? '#1890ff' : '#6b7280',
+                        background: 'none',
+                        border: 'none',
+                        borderBottom: awardPanelTab === 'search' ? '2px solid #1890ff' : '2px solid transparent',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        marginBottom: '-1px',
+                      }}
+                    >
+                      查询结果
+                      {hasSearched && (
+                        <span
+                          style={{
+                            fontSize: '12px',
+                            padding: '0 6px',
+                            borderRadius: '10px',
+                            backgroundColor: awardPanelTab === 'search' ? '#e6f7ff' : '#f3f4f6',
+                            color: awardPanelTab === 'search' ? '#1890ff' : '#6b7280',
+                            fontWeight: 500,
+                          }}
+                        >
+                          {searchResults.length}
+                        </span>
+                      )}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setAwardPanelTab('selected')}
+                      style={{
+                        padding: '8px 14px',
+                        fontSize: '14px',
+                        fontWeight: awardPanelTab === 'selected' ? 600 : 400,
+                        color: awardPanelTab === 'selected' ? '#1890ff' : '#6b7280',
+                        background: 'none',
+                        border: 'none',
+                        borderBottom: awardPanelTab === 'selected' ? '2px solid #1890ff' : '2px solid transparent',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        marginBottom: '-1px',
+                      }}
+                    >
+                      已选
+                      {awards.length > 0 && (
+                        <span
+                          style={{
+                            fontSize: '12px',
+                            padding: '0 6px',
+                            borderRadius: '10px',
+                            backgroundColor: awardPanelTab === 'selected' ? '#e6f7ff' : '#f3f4f6',
+                            color: awardPanelTab === 'selected' ? '#1890ff' : '#6b7280',
+                            fontWeight: 500,
+                          }}
+                        >
+                          {awards.length}
+                        </span>
+                      )}
+                    </button>
+                  </div>
+                  {awardPanelTab === 'selected' && awards.length > 0 && (
+                    <button
+                      type="button"
+                      onClick={handleClearAllAwards}
+                      style={{
+                        fontSize: '13px',
+                        color: '#1890ff',
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        padding: '4px 8px',
+                        borderRadius: '4px',
+                        whiteSpace: 'nowrap',
+                        flexShrink: 0,
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#e6f7ff';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                      }}
+                    >
+                      清空已选
+                    </button>
                   )}
                 </div>
                 <div
@@ -736,7 +855,8 @@ function App() {
                     overflow: 'hidden',
                   }}
                 >
-                  {!hasSearched ? (
+                  {awardPanelTab === 'search' ? (
+                  !hasSearched ? (
                     <ColumnEmptyState
                       title="尚未查询"
                       description="设置筛选条件后，点击上方「查询」获取奖项列表"
@@ -888,74 +1008,15 @@ function App() {
                         </div>
                       )}
                     </>
-                  )}
-                </div>
-              </div>
-
-              {/* 第二列：已选奖项 */}
-              <div
-                style={{
-                  borderRight: '1px solid #e5e7eb',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: '100%',
-                  overflow: 'hidden',
-                }}
-              >
-                <div
-                  style={{
-                    padding: '16px',
-                    borderBottom: '1px solid #e5e7eb',
-                    fontSize: '16px',
-                    fontWeight: 600,
-                    color: '#1f2937',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    height: '57px',
-                    boxSizing: 'border-box',
-                  }}
-                >
-                  <span>已选奖项</span>
-                  {awards.length > 0 && (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <span style={{ fontSize: '13px', color: '#6b7280', fontWeight: 400 }}>
-                        已选 <strong style={{ color: '#1890ff', fontWeight: 600 }}>{awards.length}</strong> 个奖项
-                      </span>
-                      <button
-                        type="button"
-                        onClick={handleClearAllAwards}
-                        style={{
-                          fontSize: '13px',
-                          color: '#1890ff',
-                          background: 'none',
-                          border: 'none',
-                          cursor: 'pointer',
-                          padding: '4px 8px',
-                          borderRadius: '4px',
-                          transition: 'background-color 0.2s',
-                          whiteSpace: 'nowrap',
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = '#e6f7ff';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = 'transparent';
-                        }}
-                      >
-                        清空奖项
-                      </button>
-                    </div>
-                  )}
-                </div>
-                <div style={{ flex: 1, overflow: 'auto', padding: '8px 0', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-                  {awards.length === 0 ? (
+                  )
+                  ) : awards.length === 0 ? (
                     <ColumnEmptyState
-                      title="等待添加奖项"
-                      description="在左侧「查询奖项」中点击 +，将奖项加入此列表"
+                      title="暂无已选奖项"
+                      description="切换到「查询结果」，点击 + 将奖项加入已选"
                     />
                   ) : (
-                    filteredAwards.map((award) => (
+                    <div style={{ flex: 1, overflow: 'auto', padding: '8px 0', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                    {filteredAwards.map((award) => (
                       <div
                         key={award.id}
                         onClick={() => handleSelectAward(award.id)}
@@ -1057,12 +1118,13 @@ function App() {
                           ×
                         </button>
                       </div>
-                    ))
+                    ))}
+                    </div>
                   )}
                 </div>
               </div>
 
-              {/* 第三列：选择获奖人/团队 */}
+              {/* 右栏：选择获奖人/团队 */}
               <div
                 style={{
                   display: 'flex',
@@ -1083,9 +1145,26 @@ function App() {
                     boxSizing: 'border-box',
                   }}
                 >
-                  <span style={{ fontSize: '16px', fontWeight: 600, color: '#1f2937', flexShrink: 0 }}>
-                    {getThirdColumnTitle()}
-                  </span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <span style={{ fontSize: '16px', fontWeight: 600, color: '#1f2937' }}>
+                      {getThirdColumnTitle()}
+                    </span>
+                    {selectedAward && (
+                      <div
+                        style={{
+                          fontSize: '12px',
+                          color: '#6b7280',
+                          marginTop: '2px',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                        }}
+                        title={selectedAward.title}
+                      >
+                        {selectedAward.title}
+                      </div>
+                    )}
+                  </div>
                   {canConfigureRecipients && selectedAward && secondColumnData.data.length > 0 && (
                     <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexShrink: 0 }}>
                       {(() => {
@@ -1222,17 +1301,17 @@ function App() {
                 >
                   {!canConfigureRecipients ? (
                     <ColumnEmptyState
-                      title={awards.length === 0 ? '等待选中奖项' : '请选择奖项'}
+                      title={awards.length === 0 ? '等待添加奖项' : '请选择奖项'}
                       description={
                         awards.length === 0
-                          ? '请先在中间「已选奖项」添加奖项，并点击选中一项后继续'
-                          : '在中间列表点击一项奖项，即可勾选获奖人/团队'
+                          ? '在左侧「查询结果」加入奖项后，于「已选」中点击一项继续'
+                          : '在左侧「已选」中点击一项奖项，即可勾选获奖人/团队'
                       }
                     />
                   ) : secondColumnData.data.length === 0 ? (
                     <ColumnEmptyState
                       title="该奖项暂无数据"
-                      description="请尝试在中间列表选择其他奖项"
+                      description="请尝试在左侧「已选」中选择其他奖项"
                     />
                   ) : (
                     secondColumnData.data.map((item: any) => {
