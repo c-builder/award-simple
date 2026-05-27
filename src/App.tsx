@@ -96,8 +96,9 @@ function ColumnEmptyState({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '32px 20px',
+        padding: '24px 20px',
         textAlign: 'center',
+        minHeight: 0,
       }}
     >
       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e5e7eb" strokeWidth="1.5">
@@ -743,8 +744,6 @@ function App() {
                 flexDirection: 'column',
                 flex: 1,
                 minHeight: 0,
-                height: 'calc(100vh - 326px)',
-                maxHeight: '100%',
                 backgroundColor: '#fff',
                 borderRadius: '8px',
                 boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
@@ -757,6 +756,7 @@ function App() {
                   flex: 1,
                   minHeight: 0,
                   overflow: 'hidden',
+                  alignItems: 'stretch',
                   gap: '16px',
                   padding: '16px',
                   backgroundColor: '#eef2f6',
@@ -768,9 +768,10 @@ function App() {
                 style={{
                   flex: '2 1 0',
                   minWidth: 0,
+                  minHeight: 0,
+                  alignSelf: 'stretch',
                   display: 'flex',
                   flexDirection: 'column',
-                  height: '100%',
                   overflow: 'hidden',
                   backgroundColor: '#fff',
                   borderRadius: '8px',
@@ -969,9 +970,10 @@ function App() {
                 style={{
                   flex: '3 1 0',
                   minWidth: 0,
+                  minHeight: 0,
+                  alignSelf: 'stretch',
                   display: 'flex',
                   flexDirection: 'column',
-                  height: '100%',
                   overflow: 'hidden',
                   backgroundColor: '#fff',
                   borderRadius: '8px',
@@ -982,20 +984,42 @@ function App() {
                 <div
                   style={{
                     flexShrink: 0,
-                    padding: '12px 16px',
+                    padding: '0 16px',
                     borderBottom: '1px solid #e5e7eb',
-                    backgroundColor: '#fafbfc',
+                    backgroundColor: '#fff',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     gap: '12px',
+                    height: '57px',
+                    boxSizing: 'border-box',
                   }}
                 >
-                  <div>
-                    <div style={{ fontSize: '15px', fontWeight: 600, color: '#1f2937' }}>配置获奖对象</div>
-                    <div style={{ fontSize: '12px', color: '#6b7280', marginTop: '2px' }}>
-                      {awards.length} 个奖项 · {configuredAwardsCount} 已配置 · 共选 {getTotalSelectedCount()} 人/团队
-                    </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      minWidth: 0,
+                      flex: 1,
+                    }}
+                  >
+                    <span style={{ fontSize: '16px', fontWeight: 600, color: '#1f2937', flexShrink: 0 }}>
+                      配置获奖对象
+                    </span>
+                    <span
+                      style={{
+                        fontSize: '13px',
+                        color: '#6b7280',
+                        fontWeight: 400,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      {awards.length} 个奖项 · {configuredAwardsCount} 已配置 · 共选{' '}
+                      <strong style={{ color: '#1890ff', fontWeight: 600 }}>{getTotalSelectedCount()}</strong> 人/团队
+                    </span>
                   </div>
                   {awards.length > 0 && (
                     <button
@@ -1004,12 +1028,13 @@ function App() {
                       style={{
                         fontSize: '13px',
                         color: '#ff4d4f',
-                        background: '#fff',
-                        border: '1px solid #ffccc7',
+                        background: 'none',
+                        border: 'none',
                         cursor: 'pointer',
-                        padding: '4px 12px',
+                        padding: '4px 8px',
                         borderRadius: '4px',
                         whiteSpace: 'nowrap',
+                        flexShrink: 0,
                       }}
                     >
                       清空全部
@@ -1018,6 +1043,13 @@ function App() {
                 </div>
 
                 <div style={{ flex: 1, display: 'flex', minHeight: 0, overflow: 'hidden' }}>
+                  {awards.length === 0 ? (
+                    <ColumnEmptyState
+                      title="等待添加奖项"
+                      description="请先从左侧「查询奖项」中点击 + 将奖项加入列表"
+                    />
+                  ) : (
+                    <>
                   <aside
                     style={{
                       flex: '0 0 280px',
@@ -1039,11 +1071,20 @@ function App() {
                     >
                       已选奖项
                     </div>
-                    <div style={{ flex: 1, overflow: 'auto', padding: '4px 10px 10px', minHeight: 0 }}>
-                      {awards.length === 0 ? (
+                    <div
+                      style={{
+                        flex: 1,
+                        overflow: 'auto',
+                        padding: '4px 10px 10px',
+                        minHeight: 0,
+                        display: 'flex',
+                        flexDirection: 'column',
+                      }}
+                    >
+                      {filteredAwards.length === 0 ? (
                         <ColumnEmptyState
-                          title="等待添加奖项"
-                          description="在左侧点击 + 将奖项加入列表"
+                          title="无匹配奖项"
+                          description="当前筛选条件下未找到已选奖项"
                         />
                       ) : (
                         filteredAwards.map((award) => {
@@ -1190,16 +1231,14 @@ function App() {
                   height: '100%',
                   overflow: 'hidden',
                   backgroundColor: '#fff',
+                  alignItems: 'stretch',
+                  justifyContent: 'stretch',
                 }}
               >
                 {!canConfigureRecipients ? (
                   <ColumnEmptyState
-                    title={awards.length === 0 ? '等待配置' : '请选择奖项'}
-                    description={
-                      awards.length === 0
-                        ? '请先从左侧添加奖项'
-                        : '在左侧列表选中一个奖项，在此勾选获奖人/团队'
-                    }
+                    title="请选择奖项"
+                    description="在左侧列表选中一个奖项，在此勾选获奖人/团队"
                   />
                 ) : (
                   <>
@@ -1432,6 +1471,8 @@ function App() {
                   </>
                 )}
               </section>
+                    </>
+                  )}
                 </div>
               </div>
               </div>
