@@ -672,35 +672,6 @@ function App() {
               </button>
             </div>
 
-            {/* 流程提示：轻量化阶段标签，不占用卡片空间 */}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '8px',
-                marginBottom: '8px',
-                fontSize: '12px',
-                lineHeight: 1,
-                color: '#9ca3af',
-                flexShrink: 0,
-              }}
-            >
-              <span style={{ color: hasSearched ? '#1890ff' : '#9ca3af' }}>
-                查询奖项
-              </span>
-              <span style={{ color: '#d1d5db', userSelect: 'none' }}>›</span>
-              <span style={{ color: awards.length > 0 ? '#1890ff' : '#9ca3af' }}>
-                已选奖项
-              </span>
-              <span style={{ color: '#d1d5db', userSelect: 'none' }}>›</span>
-              <span style={{ color: canConfigureRecipients ? '#1890ff' : '#9ca3af' }}>
-                {selectedAward
-                  ? (selectedAward.awardType === 'individual' ? '选择获奖人' : '选择团队')
-                  : '选择获奖人/团队'}
-              </span>
-            </div>
-
             <div
               style={{
                 display: 'flex',
