@@ -82,12 +82,12 @@ function filterAwardsByCriteria(params: {
 }
 
 const PANEL_HEADER_STYLE: React.CSSProperties = {
-  padding: '12px 16px',
+  padding: '8px 16px',
   backgroundColor: '#fafbfc',
   borderBottom: '1px solid #eef0f3',
   display: 'flex',
   alignItems: 'center',
-  minHeight: '48px',
+  minHeight: '40px',
   boxSizing: 'border-box',
 };
 
@@ -98,18 +98,20 @@ const PANEL_HEADER_LEFT_STYLE: React.CSSProperties = {
 
 function FlowGuideBar() {
   const items = [
-    '在上方筛选栏设置条件，点击「查询」',
-    '查询结果中点击 + 加入已选',
-    '在「已选」中选中奖项，右侧勾选人员',
+    '上方筛选栏设条件，点「查询」',
+    '查询结果中点 + 加入已选奖项',
+    '「已选奖项」中选中一项，右侧勾选人员',
   ];
   return (
-    <div style={PANEL_HEADER_LEFT_STYLE}>
+    <div style={{ ...PANEL_HEADER_LEFT_STYLE, overflowX: 'auto', overflowY: 'hidden' }}>
       <div
         style={{
           display: 'flex',
           alignItems: 'center',
           gap: '6px',
-          flexWrap: 'wrap',
+          flexWrap: 'nowrap',
+          whiteSpace: 'nowrap',
+          minWidth: 0,
         }}
       >
         {items.map((text, index) => (
@@ -118,7 +120,8 @@ function FlowGuideBar() {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: '6px',
+                flexShrink: 0,
               }}
             >
               <span
@@ -138,20 +141,12 @@ function FlowGuideBar() {
               >
                 {index + 1}
               </span>
-              <span style={{ fontSize: '13px', color: '#374151', lineHeight: 1.4 }}>{text}</span>
+              <span style={{ fontSize: '13px', color: '#374151', lineHeight: 1.4, whiteSpace: 'nowrap' }}>
+                {text}
+              </span>
             </div>
             {index < items.length - 1 && (
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#c4c9d4"
-                strokeWidth="2"
-                style={{ flexShrink: 0 }}
-              >
-                <path d="M9 6l6 6-6 6" />
-              </svg>
+              <span style={{ color: '#c4c9d4', fontSize: '13px', flexShrink: 0, userSelect: 'none', padding: '0 2px' }}>›</span>
             )}
           </React.Fragment>
         ))}
@@ -214,7 +209,7 @@ function App() {
   const [awardSearchKeyword, setAwardSearchKeyword] = useState('');
   const [recipientSearchKeyword, setRecipientSearchKeyword] = useState('');
 
-  // 左侧奖项区 Tab：查询结果 / 已选
+  // 左侧奖项区 Tab：查询结果 / 已选奖项
   const [awardPanelTab, setAwardPanelTab] = useState<'search' | 'selected'>('search');
 
   // 查询奖项结果
@@ -783,10 +778,10 @@ function App() {
                 <div
                   style={{
                     ...PANEL_HEADER_STYLE,
-                    padding: '12px 20px',
+                    padding: '8px 20px',
                   }}
                 >
-                  <span style={{ fontSize: '15px', fontWeight: 600, color: '#1f2937' }}>
+                  <span style={{ fontSize: '14px', fontWeight: 600, color: '#1f2937' }}>
                     {getThirdColumnTitle()}
                   </span>
                 </div>
@@ -797,13 +792,13 @@ function App() {
                     ...PANEL_HEADER_LEFT_STYLE,
                     borderBottom: '1px solid #e5e7eb',
                     justifyContent: 'space-between',
-                    padding: '12px 16px',
+                    padding: '8px 16px',
                   }}
                 >
                   <div
                     style={{
                       display: 'inline-flex',
-                      padding: '3px',
+                      padding: '2px',
                       backgroundColor: '#eef0f3',
                       borderRadius: '6px',
                       gap: '2px',
@@ -813,7 +808,7 @@ function App() {
                       type="button"
                       onClick={() => setAwardPanelTab('search')}
                       style={{
-                        padding: '6px 14px',
+                        padding: '4px 12px',
                         fontSize: '13px',
                         fontWeight: awardPanelTab === 'search' ? 600 : 400,
                         color: awardPanelTab === 'search' ? '#1890ff' : '#6b7280',
@@ -853,7 +848,7 @@ function App() {
                       type="button"
                       onClick={() => setAwardPanelTab('selected')}
                       style={{
-                        padding: '6px 14px',
+                        padding: '4px 12px',
                         fontSize: '13px',
                         fontWeight: awardPanelTab === 'selected' ? 600 : 400,
                         color: awardPanelTab === 'selected' ? '#1890ff' : '#6b7280',
@@ -868,7 +863,7 @@ function App() {
                         transition: 'all 0.15s ease',
                       }}
                     >
-                      已选
+                      已选奖项
                       <span
                         style={{
                           fontSize: '11px',
@@ -920,7 +915,7 @@ function App() {
                         e.currentTarget.style.backgroundColor = 'transparent';
                       }}
                     >
-                      清空已选
+                      清空已选奖项
                     </button>
                   )}
                 </div>
@@ -931,7 +926,7 @@ function App() {
                     ...PANEL_HEADER_STYLE,
                     borderBottom: '1px solid #e5e7eb',
                     justifyContent: 'space-between',
-                    padding: '12px 20px',
+                    padding: '8px 20px',
                     gap: '12px',
                   }}
                 >
@@ -941,7 +936,7 @@ function App() {
                         style={{
                           display: 'inline-block',
                           maxWidth: '100%',
-                          padding: '4px 10px',
+                          padding: '2px 8px',
                           backgroundColor: '#f0f7ff',
                           border: '1px solid #d6e8ff',
                           borderRadius: '4px',
@@ -1062,7 +1057,7 @@ function App() {
                     flexDirection: 'column',
                     minHeight: 0,
                     overflow: 'hidden',
-                    margin: '8px 12px 12px',
+                    margin: '6px 10px 10px',
                     backgroundColor: '#fff',
                     borderRadius: '6px',
                     border: '1px solid #e5e7eb',
@@ -1115,7 +1110,7 @@ function App() {
                         <span style={{ width: '40px', flexShrink: 0, textAlign: 'center' }}>序号</span>
                         <span style={{ width: '40px', flexShrink: 0, textAlign: 'center' }}>类型</span>
                         <span style={{ flex: 1 }}>奖项名称</span>
-                                <span style={{ width: '40px', flexShrink: 0, textAlign: 'center' }} title="加入已选">操作</span>
+                                <span style={{ width: '40px', flexShrink: 0, textAlign: 'center' }} title="加入已选奖项">操作</span>
                       </div>
                       <div style={{ overflow: 'auto', flex: 1, minHeight: 0 }}>
                         {paginatedSearchResults.map((award, index) => {
@@ -1186,7 +1181,7 @@ function App() {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                   }}
-                                  title={isAdded ? '从已选移除' : '加入已选'}
+                                  title={isAdded ? '从已选奖项移除' : '加入已选奖项'}
                                 >
                                   {isAdded ? (
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#ff4d4f">
@@ -1227,7 +1222,7 @@ function App() {
                   ) : awards.length === 0 ? (
                     <ColumnEmptyState
                       title="暂无已选奖项"
-                      description="切换到「查询结果」，点击 + 将奖项加入已选"
+                      description="切换到「查询结果」，点击 + 将奖项加入已选奖项"
                     />
                   ) : (
                     <div style={{ flex: 1, overflow: 'auto', padding: '8px 0', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
@@ -1353,7 +1348,7 @@ function App() {
                     flexDirection: 'column',
                     minHeight: 0,
                     overflow: 'hidden',
-                    margin: '8px 12px 12px',
+                    margin: '6px 10px 10px',
                     backgroundColor: '#fff',
                     borderRadius: '6px',
                     border: '1px solid #e5e7eb',
@@ -1408,14 +1403,14 @@ function App() {
                       title={awards.length === 0 ? '等待添加奖项' : '请选择奖项'}
                       description={
                         awards.length === 0
-                          ? '在左侧「查询结果」加入奖项后，于「已选」中点击一项继续'
-                          : '在左侧「已选」中点击一项奖项，即可勾选获奖人/团队'
+                          ? '在左侧「查询结果」加入奖项后，于「已选奖项」中点击一项继续'
+                          : '在左侧「已选奖项」中点击一项，即可勾选获奖人/团队'
                       }
                     />
                   ) : secondColumnData.data.length === 0 ? (
                     <ColumnEmptyState
                       title="该奖项暂无数据"
-                      description="请尝试在左侧「已选」中选择其他奖项"
+                      description="请尝试在左侧「已选奖项」中选择其他奖项"
                     />
                   ) : (
                     secondColumnData.data.map((item: any) => {
