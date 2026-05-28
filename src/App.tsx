@@ -744,9 +744,6 @@ function App() {
                 flexDirection: 'column',
                 flex: 1,
                 minHeight: 0,
-                backgroundColor: '#fff',
-                borderRadius: '8px',
-                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
                 overflow: 'hidden',
               }}
             >
@@ -758,8 +755,6 @@ function App() {
                   overflow: 'hidden',
                   alignItems: 'stretch',
                   gap: '16px',
-                  padding: '16px',
-                  backgroundColor: '#eef2f6',
                   boxSizing: 'border-box',
                 }}
               >
