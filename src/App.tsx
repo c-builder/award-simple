@@ -415,11 +415,6 @@ function App() {
     setRecipientSearchKeyword('');
   };
 
-  const getDetailPaneTitle = () => {
-    if (!selectedAward) return '选择获奖对象';
-    return selectedAward.awardType === 'individual' ? '选择获奖人' : '选择团队';
-  };
-
   const handleToggleSelectAll = () => {
     if (!selectedAward || secondColumnData.data.length === 0) return;
     const allIds = secondColumnData.data.map((item: { employeeId?: string; id?: string }) =>
@@ -446,11 +441,6 @@ function App() {
       };
     });
   };
-
-  const configuredAwardsCount = useMemo(
-    () => awards.filter(a => getAwardSelectionCount(a, awardSelections).selected > 0).length,
-    [awards, awardSelections]
-  );
 
   const detailSelectionStats = useMemo(() => {
     if (!selectedAward) return { selected: 0, total: 0, allSelected: false };
@@ -485,6 +475,22 @@ function App() {
     });
     return total;
   };
+
+  // 分别统计已选个人数与已选团队数
+  const selectedBreakdown = useMemo(() => {
+    let individuals = 0;
+    let teams = 0;
+    awards.forEach(award => {
+      const sel = awardSelections[award.id];
+      if (!sel) return;
+      if (award.awardType === 'individual') {
+        individuals += sel.recipientIds.size;
+      } else {
+        teams += sel.teamIds.size;
+      }
+    });
+    return { individuals, teams };
+  }, [awards, awardSelections]);
 
   return (
     <div
@@ -770,8 +776,8 @@ function App() {
                   overflow: 'hidden',
                   backgroundColor: '#fff',
                   borderRadius: '8px',
-                  border: '1px solid #d1d5db',
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
+                  border: '1px solid #e5e7eb',
+                  boxShadow: '0 1px 2px rgba(0, 0, 0, 0.04)',
                 }}
               >
                 <div
@@ -837,7 +843,9 @@ function App() {
                           display: 'flex',
                           alignItems: 'center',
                           gap: '8px',
-                          padding: '8px 16px',
+                          padding: '0 16px',
+                          height: '44px',
+                          boxSizing: 'border-box',
                           backgroundColor: '#fafafa',
                           borderBottom: '1px solid #e5e7eb',
                           fontSize: '12px',
@@ -849,7 +857,7 @@ function App() {
                         <span style={{ width: '40px', flexShrink: 0, textAlign: 'center' }}>序号</span>
                         <span style={{ width: '40px', flexShrink: 0, textAlign: 'center' }}>类型</span>
                         <span style={{ flex: 1 }}>奖项名称</span>
-                                <span style={{ width: '40px', flexShrink: 0, textAlign: 'center' }} title="加入已选">操作</span>
+                        <span style={{ width: '40px', flexShrink: 0, textAlign: 'center' }} title="加入已选">操作</span>
                       </div>
                       <div style={{ overflow: 'auto', flex: 1, minHeight: 0 }}>
                         {paginatedSearchResults.map((award, index) => {
@@ -866,11 +874,15 @@ function App() {
                                 }
                               }}
                               style={{
-                                padding: '12px 16px',
+                                padding: '0 16px',
+                                height: '40px',
+                                boxSizing: 'border-box',
                                 cursor: 'pointer',
-                                borderBottom: '1px solid #e5e7eb',
+                                borderBottom: '1px solid #f0f0f0',
                                 transition: 'background-color 0.2s',
                                 backgroundColor: isAdded ? '#f0fdf4' : '#fff',
+                                display: 'flex',
+                                alignItems: 'center',
                               }}
                               onMouseEnter={(e) => {
                                 e.currentTarget.style.backgroundColor = isAdded ? '#f0fdf4' : '#e6f7ff';
@@ -879,7 +891,7 @@ function App() {
                                 e.currentTarget.style.backgroundColor = isAdded ? '#f0fdf4' : '#fff';
                               }}
                             >
-                              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, minWidth: 0 }}>
                                 <span
                                   style={{
                                     width: '40px',
@@ -972,16 +984,18 @@ function App() {
                   overflow: 'hidden',
                   backgroundColor: '#fff',
                   borderRadius: '8px',
-                  border: '1px solid #d1d5db',
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
+                  border: '1px solid #e5e7eb',
+                  boxShadow: '0 1px 2px rgba(0, 0, 0, 0.04)',
                 }}
               >
                 <div
                   style={{
                     flexShrink: 0,
-                    padding: '0 16px',
+                    padding: '16px',
                     borderBottom: '1px solid #e5e7eb',
-                    backgroundColor: '#fff',
+                    fontSize: '16px',
+                    fontWeight: 600,
+                    color: '#1f2937',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
@@ -990,51 +1004,46 @@ function App() {
                     boxSizing: 'border-box',
                   }}
                 >
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '12px',
-                      minWidth: 0,
-                      flex: 1,
-                    }}
-                  >
-                    <span style={{ fontSize: '16px', fontWeight: 600, color: '#1f2937', flexShrink: 0 }}>
-                      配置获奖对象
-                    </span>
+                  <span>配置获奖对象</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
                     <span
-                      style={{
-                        fontSize: '13px',
-                        color: '#6b7280',
-                        fontWeight: 400,
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap',
-                      }}
+                      style={{ fontSize: '13px', color: '#6b7280', fontWeight: 400, whiteSpace: 'nowrap' }}
+                      title={`已添加 ${awards.length} 个奖项，已选 ${selectedBreakdown.individuals} 位获奖人、${selectedBreakdown.teams} 个团队`}
                     >
-                      {awards.length} 个奖项 · {configuredAwardsCount} 已配置 · 共选{' '}
-                      <strong style={{ color: '#1890ff', fontWeight: 600 }}>{getTotalSelectedCount()}</strong> 人/团队
+                      奖项 <strong style={{ color: '#1f2937', fontWeight: 600 }}>{awards.length}</strong>
+                      <span style={{ color: '#e5e7eb', margin: '0 8px' }}>|</span>
+                      已选{' '}
+                      <strong style={{ color: '#1890ff', fontWeight: 600 }}>{selectedBreakdown.individuals}</strong> 人
+                      <span style={{ margin: '0 4px', color: '#d1d5db' }}>/</span>
+                      <strong style={{ color: '#fa8c16', fontWeight: 600 }}>{selectedBreakdown.teams}</strong> 团队
                     </span>
+                    {awards.length > 0 && (
+                      <button
+                        type="button"
+                        onClick={handleClearAllAwards}
+                        style={{
+                          fontSize: '13px',
+                          color: '#1890ff',
+                          background: 'none',
+                          border: 'none',
+                          cursor: 'pointer',
+                          padding: '4px 8px',
+                          borderRadius: '4px',
+                          transition: 'background-color 0.2s',
+                          whiteSpace: 'nowrap',
+                          fontWeight: 400,
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = '#e6f7ff';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'transparent';
+                        }}
+                      >
+                        清空全部
+                      </button>
+                    )}
                   </div>
-                  {awards.length > 0 && (
-                    <button
-                      type="button"
-                      onClick={handleClearAllAwards}
-                      style={{
-                        fontSize: '13px',
-                        color: '#ff4d4f',
-                        background: 'none',
-                        border: 'none',
-                        cursor: 'pointer',
-                        padding: '4px 8px',
-                        borderRadius: '4px',
-                        whiteSpace: 'nowrap',
-                        flexShrink: 0,
-                      }}
-                    >
-                      清空全部
-                    </button>
-                  )}
                 </div>
 
                 <div style={{ flex: 1, display: 'flex', minHeight: 0, overflow: 'hidden' }}>
@@ -1051,26 +1060,34 @@ function App() {
                       display: 'flex',
                       flexDirection: 'column',
                       minHeight: 0,
-                      backgroundColor: '#f7f8fa',
+                      backgroundColor: '#fff',
                       borderRight: '1px solid #e5e7eb',
                     }}
                   >
                     <div
                       style={{
-                        padding: '10px 12px 6px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        padding: '0 16px',
+                        height: '44px',
+                        boxSizing: 'border-box',
+                        backgroundColor: '#fafafa',
+                        borderBottom: '1px solid #e5e7eb',
                         fontSize: '12px',
-                        fontWeight: 500,
+                        fontWeight: 600,
                         color: '#6b7280',
-                        letterSpacing: '0.02em',
+                        flexShrink: 0,
                       }}
                     >
-                      已选奖项
+                      <span style={{ width: '40px', flexShrink: 0, textAlign: 'center' }}>类型</span>
+                      <span style={{ flex: 1 }}>奖项名称</span>
+                      <span style={{ width: '52px', flexShrink: 0, textAlign: 'right' }}>已选</span>
                     </div>
                     <div
                       style={{
                         flex: 1,
                         overflow: 'auto',
-                        padding: '4px 10px 10px',
                         minHeight: 0,
                         display: 'flex',
                         flexDirection: 'column',
@@ -1086,103 +1103,92 @@ function App() {
                           const { selected, total } = getAwardSelectionCount(award, awardSelections);
                           const isActive = selectedAwardId === award.id;
                           const isComplete = total > 0 && selected === total;
-                          const progressPct = total > 0 ? Math.round((selected / total) * 100) : 0;
+                          const isHighlight = highlightAwardId === award.id;
                           return (
                             <div
                               key={award.id}
                               onClick={() => handleSelectAward(award.id)}
                               style={{
-                                marginBottom: '8px',
-                                padding: '10px 12px',
-                                cursor: 'pointer',
-                                borderRadius: '6px',
-                                border: isActive ? '1px solid #1890ff' : '1px solid #e5e7eb',
-                                backgroundColor:
-                                  highlightAwardId === award.id
-                                    ? '#fffbe6'
-                                    : isActive
-                                      ? '#fff'
-                                      : '#fff',
-                                boxShadow: isActive ? '0 2px 8px rgba(24, 144, 255, 0.12)' : 'none',
                                 position: 'relative',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                padding: '0 16px',
+                                height: '40px',
+                                boxSizing: 'border-box',
+                                cursor: 'pointer',
+                                borderBottom: '1px solid #f0f0f0',
+                                borderLeft: isActive ? '3px solid #1890ff' : '3px solid transparent',
+                                paddingLeft: isActive ? '13px' : '16px',
+                                backgroundColor: isHighlight
+                                  ? '#fffbe6'
+                                  : isActive
+                                    ? '#f0f9ff'
+                                    : '#fff',
+                                transition: 'background-color 0.2s',
                               }}
                               onMouseEnter={(e) => {
+                                if (!isActive && !isHighlight) {
+                                  e.currentTarget.style.backgroundColor = '#fafafa';
+                                }
                                 const btn = e.currentTarget.querySelector('.delete-award-btn') as HTMLElement;
                                 if (btn) btn.style.opacity = '1';
                               }}
                               onMouseLeave={(e) => {
+                                e.currentTarget.style.backgroundColor = isHighlight
+                                  ? '#fffbe6'
+                                  : isActive
+                                    ? '#f0f9ff'
+                                    : '#fff';
                                 const btn = e.currentTarget.querySelector('.delete-award-btn') as HTMLElement;
                                 if (btn) btn.style.opacity = '0';
                               }}
                             >
-                              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                                <span
-                                  style={{
-                                    flexShrink: 0,
-                                    marginTop: '2px',
-                                    padding: '1px 6px',
-                                    fontSize: '11px',
-                                    borderRadius: '4px',
-                                    backgroundColor: award.awardType === 'individual' ? '#e6f7ff' : '#fff7e6',
-                                    color: award.awardType === 'individual' ? '#1890ff' : '#fa8c16',
-                                  }}
-                                >
-                                  {award.awardType === 'individual' ? '个人' : '团队'}
-                                </span>
-                                <div style={{ flex: 1, minWidth: 0 }}>
-                                  <div
-                                    style={{
-                                      fontSize: '13px',
-                                      fontWeight: isActive ? 600 : 400,
-                                      color: '#1f2937',
-                                      overflow: 'hidden',
-                                      textOverflow: 'ellipsis',
-                                      whiteSpace: 'nowrap',
-                                    }}
-                                    title={award.title}
-                                  >
-                                    {award.title}
-                                  </div>
-                                  <div
-                                    style={{
-                                      marginTop: '6px',
-                                      display: 'flex',
-                                      alignItems: 'center',
-                                      justifyContent: 'space-between',
-                                      gap: '8px',
-                                    }}
-                                  >
-                                    <div
-                                      style={{
-                                        flex: 1,
-                                        height: '4px',
-                                        borderRadius: '2px',
-                                        backgroundColor: '#e5e7eb',
-                                        overflow: 'hidden',
-                                      }}
-                                    >
-                                      <div
-                                        style={{
-                                          width: `${progressPct}%`,
-                                          height: '100%',
-                                          borderRadius: '2px',
-                                          backgroundColor: isComplete ? '#52c41a' : selected > 0 ? '#1890ff' : 'transparent',
-                                          transition: 'width 0.2s',
-                                        }}
-                                      />
-                                    </div>
-                                    <span
-                                      style={{
-                                        fontSize: '11px',
-                                        color: isComplete ? '#52c41a' : selected > 0 ? '#1890ff' : '#9ca3af',
-                                        flexShrink: 0,
-                                      }}
-                                    >
-                                      {selected}/{total}
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                              <span
+                                style={{
+                                  width: '40px',
+                                  flexShrink: 0,
+                                  padding: '2px 0',
+                                  backgroundColor: award.awardType === 'individual' ? '#e6f7ff' : '#fff7e6',
+                                  color: award.awardType === 'individual' ? '#1890ff' : '#fa8c16',
+                                  borderRadius: '4px',
+                                  fontSize: '11px',
+                                  fontWeight: 500,
+                                  display: 'inline-flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                }}
+                              >
+                                {award.awardType === 'individual' ? '个人' : '团队'}
+                              </span>
+                              <span
+                                style={{
+                                  flex: 1,
+                                  minWidth: 0,
+                                  fontSize: '14px',
+                                  color: '#1f2937',
+                                  fontWeight: isActive ? 500 : 400,
+                                  overflow: 'hidden',
+                                  textOverflow: 'ellipsis',
+                                  whiteSpace: 'nowrap',
+                                }}
+                                title={award.title}
+                              >
+                                {award.title}
+                              </span>
+                              <span
+                                style={{
+                                  width: '52px',
+                                  flexShrink: 0,
+                                  textAlign: 'right',
+                                  fontSize: '12px',
+                                  fontVariantNumeric: 'tabular-nums',
+                                  color: isComplete ? '#52c41a' : selected > 0 ? '#1890ff' : '#9ca3af',
+                                  fontWeight: selected > 0 ? 500 : 400,
+                                }}
+                              >
+                                {selected}/{total}
+                              </span>
                               <button
                                 type="button"
                                 onClick={(e) => {
@@ -1193,19 +1199,23 @@ function App() {
                                 title="移除奖项"
                                 style={{
                                   position: 'absolute',
-                                  top: '6px',
+                                  top: '50%',
                                   right: '6px',
-                                  width: '20px',
-                                  height: '20px',
-                                  borderRadius: '4px',
+                                  transform: 'translateY(-50%)',
+                                  width: '18px',
+                                  height: '18px',
+                                  borderRadius: '50%',
                                   border: 'none',
-                                  backgroundColor: '#fff1f0',
-                                  color: '#ff4d4f',
+                                  backgroundColor: '#ff4d4f',
+                                  color: '#fff',
                                   cursor: 'pointer',
-                                  fontSize: '14px',
+                                  fontSize: '12px',
                                   lineHeight: 1,
                                   opacity: 0,
                                   transition: 'opacity 0.2s',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
                                 }}
                               >
                                 ×
@@ -1240,59 +1250,14 @@ function App() {
                     <div
                       style={{
                         flexShrink: 0,
-                        padding: '14px 16px 12px',
-                        borderBottom: '1px solid #f0f0f0',
-                      }}
-                    >
-                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                        <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ fontSize: '14px', fontWeight: 600, color: '#1f2937' }}>
-                            {getDetailPaneTitle()}
-                          </div>
-                          <div
-                            style={{
-                              marginTop: '4px',
-                              fontSize: '12px',
-                              color: '#6b7280',
-                              overflow: 'hidden',
-                              textOverflow: 'ellipsis',
-                              whiteSpace: 'nowrap',
-                            }}
-                            title={selectedAward!.title}
-                          >
-                            {selectedAward!.title}
-                          </div>
-                        </div>
-                        <span
-                          style={{
-                            flexShrink: 0,
-                            padding: '2px 8px',
-                            fontSize: '12px',
-                            borderRadius: '4px',
-                            backgroundColor:
-                              detailSelectionStats.selected === detailSelectionStats.total && detailSelectionStats.total > 0
-                                ? '#f6ffed'
-                                : '#e6f7ff',
-                            color:
-                              detailSelectionStats.selected === detailSelectionStats.total && detailSelectionStats.total > 0
-                                ? '#52c41a'
-                                : '#1890ff',
-                          }}
-                        >
-                          已选 {detailSelectionStats.selected}/{detailSelectionStats.filteredTotal}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div
-                      style={{
-                        flexShrink: 0,
-                        padding: '10px 16px',
-                        borderBottom: '1px solid #f0f0f0',
+                        padding: '0 16px',
+                        height: '44px',
+                        boxSizing: 'border-box',
+                        borderBottom: '1px solid #e5e7eb',
+                        backgroundColor: '#fafafa',
                         display: 'flex',
                         alignItems: 'center',
                         gap: '12px',
-                        backgroundColor: '#fafafa',
                       }}
                     >
                       <div
@@ -1303,11 +1268,11 @@ function App() {
                           gap: '8px',
                           padding: '6px 12px',
                           backgroundColor: '#fff',
-                          border: '1px solid #e5e7eb',
-                          borderRadius: '6px',
+                          border: '1px solid #d9d9d9',
+                          borderRadius: '4px',
                         }}
                       >
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2">
                           <circle cx="11" cy="11" r="8" />
                           <path d="m21 21-4.35-4.35" />
                         </svg>
@@ -1328,28 +1293,30 @@ function App() {
                           }}
                         />
                       </div>
-                      {secondColumnData.data.length > 0 && (
-                        <label
+                      <span
+                        style={{
+                          fontSize: '13px',
+                          color: '#6b7280',
+                          fontWeight: 400,
+                          whiteSpace: 'nowrap',
+                          flexShrink: 0,
+                        }}
+                      >
+                        已选{' '}
+                        <strong
                           style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '6px',
-                            fontSize: '13px',
-                            color: '#374151',
-                            cursor: 'pointer',
-                            flexShrink: 0,
-                            userSelect: 'none',
+                            color:
+                              detailSelectionStats.selected === detailSelectionStats.total &&
+                              detailSelectionStats.total > 0
+                                ? '#52c41a'
+                                : '#1890ff',
+                            fontWeight: 600,
                           }}
                         >
-                          <input
-                            type="checkbox"
-                            checked={detailSelectionStats.allSelected}
-                            onChange={handleToggleSelectAll}
-                            style={{ width: '16px', height: '16px', accentColor: '#1890ff', cursor: 'pointer' }}
-                          />
-                          全选
-                        </label>
-                      )}
+                          {detailSelectionStats.selected}
+                        </strong>
+                        /{detailSelectionStats.filteredTotal}
+                      </span>
                     </div>
 
                     <div style={{ flex: 1, overflow: 'auto', minHeight: 0 }}>
@@ -1365,23 +1332,38 @@ function App() {
                               display: 'flex',
                               alignItems: 'center',
                               gap: '10px',
-                              padding: '8px 16px',
+                              padding: '0 16px',
+                              height: '40px',
+                              boxSizing: 'border-box',
                               fontSize: '12px',
                               fontWeight: 500,
                               color: '#9ca3af',
+                              backgroundColor: '#fff',
                               borderBottom: '1px solid #f0f0f0',
                               position: 'sticky',
                               top: 0,
-                              backgroundColor: '#fff',
                               zIndex: 1,
                             }}
                           >
-                            <span style={{ width: '18px', flexShrink: 0 }} />
-                            <span style={{ flex: 1 }}>
+                            <input
+                              type="checkbox"
+                              checked={detailSelectionStats.allSelected}
+                              onChange={handleToggleSelectAll}
+                              title={detailSelectionStats.allSelected ? '取消全选' : '全选'}
+                              style={{
+                                width: '16px',
+                                height: '16px',
+                                flexShrink: 0,
+                                margin: 0,
+                                accentColor: '#1890ff',
+                                cursor: 'pointer',
+                              }}
+                            />
+                            <span style={{ flex: '3 1 0', minWidth: 0 }}>
                               {selectedAward!.awardType === 'individual' ? '姓名' : '团队名称'}
                             </span>
                             {selectedAward!.awardType === 'individual' && (
-                              <span style={{ width: '120px', flexShrink: 0 }}>部门</span>
+                              <span style={{ flex: '7 1 0', minWidth: 0 }}>部门</span>
                             )}
                           </div>
                           {secondColumnData.data.map((item: { employeeId?: string; id?: string; name: string; department?: string }) => {
@@ -1401,19 +1383,22 @@ function App() {
                                     : handleToggleTeam(selectedAward!.id, itemId)
                                 }
                                 style={{
-                                  padding: '10px 16px',
+                                  padding: '0 16px',
+                                  height: '40px',
+                                  boxSizing: 'border-box',
                                   cursor: 'pointer',
                                   display: 'flex',
                                   alignItems: 'center',
                                   gap: '10px',
-                                  backgroundColor: isSelected ? '#f0f7ff' : 'transparent',
-                                  borderBottom: '1px solid #f9fafb',
+                                  backgroundColor: isSelected ? '#f0f9ff' : '#fff',
+                                  borderBottom: '1px solid #f0f0f0',
+                                  transition: 'background-color 0.2s',
                                 }}
                                 onMouseEnter={(e) => {
                                   if (!isSelected) e.currentTarget.style.backgroundColor = '#fafafa';
                                 }}
                                 onMouseLeave={(e) => {
-                                  e.currentTarget.style.backgroundColor = isSelected ? '#f0f7ff' : 'transparent';
+                                  e.currentTarget.style.backgroundColor = isSelected ? '#f0f9ff' : '#fff';
                                 }}
                               >
                                 <input
@@ -1430,7 +1415,8 @@ function App() {
                                 />
                                 <span
                                   style={{
-                                    flex: 1,
+                                    flex: isIndividual ? '3 1 0' : '1 1 0',
+                                    minWidth: 0,
                                     fontSize: '14px',
                                     color: '#1f2937',
                                     overflow: 'hidden',
@@ -1444,8 +1430,8 @@ function App() {
                                 {isIndividual && (
                                   <span
                                     style={{
-                                      width: '120px',
-                                      flexShrink: 0,
+                                      flex: '7 1 0',
+                                      minWidth: 0,
                                       fontSize: '12px',
                                       color: '#9ca3af',
                                       overflow: 'hidden',
