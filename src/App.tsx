@@ -152,6 +152,23 @@ function App() {
   const [awardSearchKeyword, setAwardSearchKeyword] = useState('');
   const [recipientSearchKeyword, setRecipientSearchKeyword] = useState('');
 
+  // 详情区搜索下拉浮层
+  const [pickerOpen, setPickerOpen] = useState(false);
+  const pickerRef = useRef<HTMLDivElement>(null);
+  const [pickerPage, setPickerPage] = useState(1);
+  const pickerPageSize = 10;
+
+  useEffect(() => {
+    if (!pickerOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (pickerRef.current && !pickerRef.current.contains(e.target as Node)) {
+        setPickerOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [pickerOpen]);
+
   // 从左侧加入已选后的短暂高亮
   const [highlightAwardId, setHighlightAwardId] = useState('');
 
@@ -324,29 +341,40 @@ function App() {
     setAwards(prev => prev.filter(a => a.id !== awardId));
   };
 
-  // 第二列显示的数据：获奖人或团队
+  // 第二列显示的数据：获奖人或团队（全量，不再受搜索框过滤）
   const secondColumnData = useMemo(() => {
-    if (!selectedAward) return { type: null, data: [] };
-
+    if (!selectedAward) return { type: null as null | 'individual' | 'team', data: [] as any[] };
     if (selectedAward.awardType === 'individual') {
-      let recipients = selectedAward.recipients || [];
-      if (recipientSearchKeyword) {
-        recipients = recipients.filter(r =>
-          r.name.toLowerCase().includes(recipientSearchKeyword.toLowerCase()) ||
-          r.employeeId.includes(recipientSearchKeyword)
-        );
-      }
-      return { type: 'individual', data: recipients };
-    } else {
-      let teams = selectedAward.teams || [];
-      if (recipientSearchKeyword) {
-        teams = teams.filter(t =>
-          t.name.toLowerCase().includes(recipientSearchKeyword.toLowerCase())
-        );
-      }
-      return { type: 'team', data: teams };
+      return { type: 'individual' as const, data: selectedAward.recipients || [] };
     }
+    return { type: 'team' as const, data: selectedAward.teams || [] };
+  }, [selectedAward]);
+
+  // 下拉选择器使用：按搜索关键词过滤后的候选项
+  const pickerData = useMemo(() => {
+    if (!selectedAward) return [] as any[];
+    const kw = recipientSearchKeyword.trim().toLowerCase();
+    if (selectedAward.awardType === 'individual') {
+      const list = selectedAward.recipients || [];
+      if (!kw) return list;
+      return list.filter(
+        r => r.name.toLowerCase().includes(kw) || r.employeeId.toLowerCase().includes(kw)
+      );
+    }
+    const list = selectedAward.teams || [];
+    if (!kw) return list;
+    return list.filter(t => t.name.toLowerCase().includes(kw));
   }, [selectedAward, recipientSearchKeyword]);
+
+  const paginatedPickerData = useMemo(() => {
+    const start = (pickerPage - 1) * pickerPageSize;
+    return pickerData.slice(start, start + pickerPageSize);
+  }, [pickerData, pickerPage]);
+
+  // 搜索关键词或奖项变化时，重置到第一页
+  useEffect(() => {
+    setPickerPage(1);
+  }, [recipientSearchKeyword, selectedAwardId]);
 
   const handleDepartmentChange = (dept: string) => {
     setSelectedDepartment(dept);
@@ -355,6 +383,8 @@ function App() {
   const handleSelectAward = (awardId: string) => {
     setSelectedAwardId(awardId);
     setRecipientSearchKeyword('');
+    setPickerOpen(false);
+    setPickerPage(1);
   };
 
   const handleToggleRecipient = (awardId: string, recipientId: string) => {
@@ -445,20 +475,19 @@ function App() {
   const detailSelectionStats = useMemo(() => {
     if (!selectedAward) return { selected: 0, total: 0, allSelected: false };
     const { selected, total } = getAwardSelectionCount(selectedAward, awardSelections);
-    const filteredTotal = secondColumnData.data.length;
     const currentSelection = awardSelections[selectedAward.id] || {
       recipientIds: new Set<string>(),
       teamIds: new Set<string>(),
     };
     const allSelected =
-      filteredTotal > 0 &&
+      total > 0 &&
       secondColumnData.data.every((item: { employeeId?: string; id?: string }) => {
         const id = selectedAward.awardType === 'individual' ? item.employeeId! : item.id!;
         return selectedAward.awardType === 'individual'
           ? currentSelection.recipientIds.has(id)
           : currentSelection.teamIds.has(id);
       });
-    return { selected, total, filteredTotal, allSelected };
+    return { selected, total, allSelected };
   }, [selectedAward, awardSelections, secondColumnData.data]);
 
   // 获取当前奖项的选中状态
@@ -1258,40 +1287,241 @@ function App() {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '12px',
+                        position: 'relative',
                       }}
                     >
                       <div
+                        ref={pickerRef}
                         style={{
                           flex: 1,
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '8px',
-                          padding: '6px 12px',
-                          backgroundColor: '#fff',
-                          border: '1px solid #d9d9d9',
-                          borderRadius: '4px',
+                          position: 'relative',
+                          minWidth: 0,
                         }}
                       >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2">
-                          <circle cx="11" cy="11" r="8" />
-                          <path d="m21 21-4.35-4.35" />
-                        </svg>
-                        <input
-                          type="text"
-                          placeholder={
-                            selectedAward!.awardType === 'individual' ? '搜索姓名或工号' : '搜索团队名称'
-                          }
-                          value={recipientSearchKeyword}
-                          onChange={(e) => setRecipientSearchKeyword(e.target.value)}
+                        <div
                           style={{
-                            flex: 1,
-                            border: 'none',
-                            background: 'transparent',
-                            fontSize: '13px',
-                            outline: 'none',
-                            minWidth: 0,
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            padding: '6px 12px',
+                            backgroundColor: '#fff',
+                            border: `1px solid ${pickerOpen ? '#1890ff' : '#d9d9d9'}`,
+                            borderRadius: '4px',
+                            transition: 'border-color 0.2s',
+                            cursor: 'text',
                           }}
-                        />
+                          onClick={() => setPickerOpen(true)}
+                        >
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                          </svg>
+                          <input
+                            type="text"
+                            placeholder={
+                              selectedAward!.awardType === 'individual'
+                                ? '搜索姓名/工号'
+                                : '搜索团队名称'
+                            }
+                            value={recipientSearchKeyword}
+                            onChange={(e) => {
+                              setRecipientSearchKeyword(e.target.value);
+                              setPickerOpen(true);
+                            }}
+                            onFocus={() => setPickerOpen(true)}
+                            style={{
+                              flex: 1,
+                              border: 'none',
+                              background: 'transparent',
+                              fontSize: '13px',
+                              outline: 'none',
+                              minWidth: 0,
+                            }}
+                          />
+                          {recipientSearchKeyword && (
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setRecipientSearchKeyword('');
+                              }}
+                              title="清空"
+                              style={{
+                                border: 'none',
+                                background: 'transparent',
+                                color: '#9ca3af',
+                                cursor: 'pointer',
+                                fontSize: '14px',
+                                lineHeight: 1,
+                                padding: 0,
+                              }}
+                            >
+                              ×
+                            </button>
+                          )}
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#9ca3af"
+                            strokeWidth="2"
+                            style={{
+                              transform: pickerOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                              transition: 'transform 0.2s',
+                              flexShrink: 0,
+                            }}
+                          >
+                            <polyline points="6 9 12 15 18 9" />
+                          </svg>
+                        </div>
+
+                        {pickerOpen && (
+                          <div
+                            style={{
+                              position: 'absolute',
+                              top: 'calc(100% + 4px)',
+                              left: 0,
+                              right: 0,
+                              maxHeight: '320px',
+                              backgroundColor: '#fff',
+                              border: '1px solid #e5e7eb',
+                              borderRadius: '6px',
+                              boxShadow: '0 6px 16px rgba(0, 0, 0, 0.08)',
+                              zIndex: 20,
+                              display: 'flex',
+                              flexDirection: 'column',
+                              overflow: 'hidden',
+                            }}
+                          >
+                            <div style={{ flex: 1, overflow: 'auto', minHeight: 0 }}>
+                              {pickerData.length === 0 ? (
+                                <div
+                                  style={{
+                                    padding: '24px 16px',
+                                    textAlign: 'center',
+                                    color: '#9ca3af',
+                                    fontSize: '13px',
+                                  }}
+                                >
+                                  无匹配结果
+                                </div>
+                              ) : (
+                                paginatedPickerData.map((item: any) => {
+                                  const isIndividual = selectedAward!.awardType === 'individual';
+                                  const itemId = isIndividual ? item.employeeId : item.id;
+                                  const currentSelection = getCurrentSelection();
+                                  const isAdded = isIndividual
+                                    ? currentSelection.recipientIds.has(itemId)
+                                    : currentSelection.teamIds.has(itemId);
+                                  return (
+                                    <div
+                                      key={itemId}
+                                      onClick={() =>
+                                        isIndividual
+                                          ? handleToggleRecipient(selectedAward!.id, itemId)
+                                          : handleToggleTeam(selectedAward!.id, itemId)
+                                      }
+                                      style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '8px',
+                                        padding: '0 12px',
+                                        height: '36px',
+                                        cursor: 'pointer',
+                                        borderBottom: '1px solid #f5f5f5',
+                                        backgroundColor: isAdded ? '#f0fdf4' : '#fff',
+                                        transition: 'background-color 0.15s',
+                                      }}
+                                      onMouseEnter={(e) => {
+                                        e.currentTarget.style.backgroundColor = isAdded
+                                          ? '#f0fdf4'
+                                          : '#fafafa';
+                                      }}
+                                      onMouseLeave={(e) => {
+                                        e.currentTarget.style.backgroundColor = isAdded
+                                          ? '#f0fdf4'
+                                          : '#fff';
+                                      }}
+                                    >
+                                      <span
+                                        style={{
+                                          flex: '0 0 auto',
+                                          fontSize: '14px',
+                                          color: '#1f2937',
+                                          overflow: 'hidden',
+                                          textOverflow: 'ellipsis',
+                                          whiteSpace: 'nowrap',
+                                          maxWidth: '30%',
+                                        }}
+                                        title={item.name}
+                                      >
+                                        {item.name}
+                                      </span>
+                                      {isIndividual && (
+                                        <span
+                                          style={{
+                                            flex: 1,
+                                            minWidth: 0,
+                                            fontSize: '12px',
+                                            color: '#9ca3af',
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap',
+                                          }}
+                                          title={item.department}
+                                        >
+                                          {item.department}
+                                        </span>
+                                      )}
+                                      {!isIndividual && <span style={{ flex: 1 }} />}
+                                      <span
+                                        style={{
+                                          flexShrink: 0,
+                                          display: 'inline-flex',
+                                          alignItems: 'center',
+                                          justifyContent: 'center',
+                                          width: '20px',
+                                          height: '20px',
+                                        }}
+                                        title={isAdded ? '从已选移除' : '加入已选'}
+                                      >
+                                        {isAdded ? (
+                                          <svg width="16" height="16" viewBox="0 0 24 24" fill="#ff4d4f">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z" />
+                                          </svg>
+                                        ) : (
+                                          <svg width="16" height="16" viewBox="0 0 24 24" fill="#1890ff">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+                                          </svg>
+                                        )}
+                                      </span>
+                                    </div>
+                                  );
+                                })
+                              )}
+                            </div>
+                            {pickerData.length > pickerPageSize && (
+                              <div
+                                style={{
+                                  flexShrink: 0,
+                                  padding: '6px 8px',
+                                  borderTop: '1px solid #f0f0f0',
+                                  backgroundColor: '#fff',
+                                }}
+                              >
+                                <Pagination
+                                  current={pickerPage}
+                                  pageSize={pickerPageSize}
+                                  total={pickerData.length}
+                                  onChange={setPickerPage}
+                                  showTotal={false}
+                                  style={{ justifyContent: 'center' }}
+                                />
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                       <span
                         style={{
@@ -1315,7 +1545,7 @@ function App() {
                         >
                           {detailSelectionStats.selected}
                         </strong>
-                        /{detailSelectionStats.filteredTotal}
+                        /{detailSelectionStats.total}
                       </span>
                     </div>
 
